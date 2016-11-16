@@ -33,6 +33,12 @@
 				<div class="page">
 					Page 2
 				</div>
+				<div class="page">
+					Page 3
+				</div>
+				<div class="page">
+					Page 4
+				</div>
 			</div>
 		</div>
 		<div id="left-arrow"
@@ -49,6 +55,7 @@
 			var mySwipe = Swipe(document.getElementById('slider'));
 			mySwipe.setup();
 
+			/* // TWO PAGES //
 			var body = document.getElementsByTagName("body")[0];
 			var otherScroll = 0;
 
@@ -56,6 +63,21 @@
 				oldScroll = otherScroll;
 				otherScroll = body.scrollTop;
 				body.scrollTop = oldScroll;
+			};
+
+			var mySwipe = Swipe(document.getElementById('slider'), { callback: cb });
+			mySwipe.setup();
+			*/
+
+			// FOR MULTIPLE PAGES //
+			var body = document.getElementsByTagName("body")[0];
+			var positions = [];
+			var currentPage = 0;
+
+			var cb = function(index, element) {
+				positions[currentPage] = body.scrollTop;
+				body.scrollTop = positions[index] || 0;
+				currentPage = index;
 			};
 
 			var mySwipe = Swipe(document.getElementById('slider'), { callback: cb });
