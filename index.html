@@ -89,6 +89,12 @@
 		--></div>
 		<script src="http://cdn.ayazhafiz.com/js/emojicons.min.js"></script>
 		<script>
+			window.onload = function() {
+				if(!window.location.hash) {
+					window.location = window.location + '#loaded';
+					history.go(0);
+				}
+			}
 			$('.navbar-child').each(function() {
 				$(this).on('touchend', function() {
 					$('.navbar-child').removeClass('active');
