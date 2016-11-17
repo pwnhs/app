@@ -113,6 +113,11 @@
 					--><div class="label"><span>Officer</span></div>
 			</div><!--
 		--></div>
+		<script>
+			document.addEventListener('gesturestart', function (e) {
+				e.preventDefault();
+			});
+		</script>
 		<script src="http://cdn.ayazhafiz.com/js/emojicons.min.js"></script>
 		<script>
 			$('.navbar-child').each(function() {
@@ -121,24 +126,6 @@
 					$(this).addClass('active');
 				})
 			});
-			(function($) {
-			  var IS_IOS = /iphone|ipad/i.test(navigator.userAgent);
-			  $.fn.nodoubletapzoom = function() {
-				if (IS_IOS)
-				  $(this).bind('touchstart', function preventZoom(e) {
-					var t2 = e.timeStamp
-					  , t1 = $(this).data('lastTouch') || t2
-					  , dt = t2 - t1
-					  , fingers = e.originalEvent.touches.length;
-					$(this).data('lastTouch', t2);
-					if (!dt || dt > 500 || fingers > 1) return; // not double-tap
-
-					e.preventDefault(); // double tap - prevent the zoom
-					// also synthesize click events we just swallowed up
-					$(this).trigger('click').trigger('click');
-				  });
-			  };
-			})(jQuery);
 		</script>
 	</body>
 </html>
