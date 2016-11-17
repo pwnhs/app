@@ -133,22 +133,22 @@
 		</script>
 		<script>
 			$('.navbar-child').each(function() {
-				$(this).on('click', function() {
+				$(this).on('touchend', function() {
 					$('.navbar-child').removeClass('active');
 					$('iframe').addClass('hidden');
 					$(this).addClass('active');
 				})
 			});
-			$('#status-trigger').on('click', function() {
+			$('#status-trigger').on('touchend', function() {
 				$('#status').removeClass('hidden');
 			});
-			$('#docs-trigger').on('click', function() {
+			$('#docs-trigger').on('touchend', function() {
 				$('#docs').removeClass('hidden');
 			});
-			$('#contact-trigger').on('click', function() {
+			$('#contact-trigger').on('touchend', function() {
 				$('#contact').removeClass('hidden');
 			});
-			$('#officer-trigger').on('click', function() {
+			$('#officer-trigger').on('touchend', function() {
 				$('#officer').removeClass('hidden');
 			});
 		</script>
