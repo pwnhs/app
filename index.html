@@ -27,6 +27,7 @@
 			}
 			.navbar {
 				position: fixed;
+				z-index: 10;
 				right: 0;
 				bottom: 0;
 				left: 0;
@@ -61,6 +62,9 @@
 			.active > i, .active > .label > span {
 				color: #035299 !important;
 			}
+			.hidden {
+				display: none;
+			}
 		</style>
 		<script src="https://raw.githubusercontent.com/luis-kaufmann-silva/jquery-p2r/master/jquery.p2r.js"></script>
 		<script>
@@ -75,9 +79,6 @@
 		</script>
 	</head>
 	<body ontouchstart="" onmouseover="">
-		<!--iframe src="http://status.pwnhs.org" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:0;">
-			Your browser doesn't support iframes
-		</iframe-->
 		<div class="scroll">
 			<div class="refresh">
 				Pull To sss
@@ -86,28 +87,40 @@
 				content
 			</div>
 		</div>
+		<iframe id="status" class="" src="http://status.pwnhs.org/trimmed.html" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:0;">
+			Your browser doesn't support iframes
+		</iframe>
+		<iframe id="docs" class="hidden" src="http://docs.pwnhs.org/trimmed.html" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:0;">
+			Your browser doesn't support iframes
+		</iframe>
+		<iframe id="contact" class="hidden" src="http://pwnhs.org/contact-trimmed.html" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:0;">
+			Your browser doesn't support iframes
+		</iframe>
+		<iframe id="officer" class="hidden" src="http://officer.pwnhs.org/trimmed.html" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:0;">
+			Your browser doesn't support iframes
+		</iframe>
 		<div class="navbar"><!--
-			--><div class="navbar-child active"><!--
+			--><div id="home-trigger" class="navbar-child active"><!--
 					--><i class="fa fa-home"></i><!--
 				--><br><!--
 					--><div class="label"><span>Home</span></div>
 			</div><!--
-			--><div class="navbar-child">
+			--><div id="status-trigger" class="navbar-child">
 					<i class="fa fa-clipboard"></i><!--
 				--><br><!--
 					--><div class="label"><span>Status</span></div>
 			</div><!--
-			--><div class="navbar-child"><!--
+			--><div id="docs-trigger" class="navbar-child"><!--
 					--><i class="fa fa-bookmark"></i><!--
 				--><br><!--
 					--><div class="label"><span>Docs</span></div>
 			</div><!--
-			--><div class="navbar-child"><!--
+			--><div id="contact-trigger" class="navbar-child"><!--
 					--><i class="fa fa-comments"></i><!--
 				--><br><!--
 					--><div class="label"><span>Contact</span></div>
 			</div><!--
-			--><div class="navbar-child"><!--
+			--><div id="officer-trigger" class="navbar-child"><!--
 					--><i class="fa fa-gear"></i><!--
 				--><br><!--
 					--><div class="label"><span>Officer</span></div>
@@ -118,13 +131,25 @@
 				e.preventDefault();
 			});
 		</script>
-		<script src="http://cdn.ayazhafiz.com/js/emojicons.min.js"></script>
 		<script>
 			$('.navbar-child').each(function() {
-				$(this).on('touchend', function() {
+				$(this).on('click', function() {
 					$('.navbar-child').removeClass('active');
+					$('iframe').addClass('hidden');
 					$(this).addClass('active');
 				})
+			});
+			$('#status-trigger').on('click', function() {
+				$('#status').removeClass('hidden');
+			});
+			$('#docs-trigger').on('click', function() {
+				$('#docs').removeClass('hidden');
+			});
+			$('#contact-trigger').on('click', function() {
+				$('#contact').removeClass('hidden');
+			});
+			$('#officer-trigger').on('click', function() {
+				$('#officer').removeClass('hidden');
 			});
 		</script>
 	</body>
