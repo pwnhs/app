@@ -88,8 +88,9 @@
 		--></div>
 		<script src="http://cdn.ayazhafiz.com/js/emojicons.min.js"></script>
 		<script>
+			var clickOrTouch = (('ontouchend' in window)) ? 'touchend' : 'click';
 			$('.navbar-child').each(function() {
-				$(this).on('click', function() {
+				$(this).on(clickOrTouch, function() {
 					$('.navbar-child').removeClass('active');
 					$(this).addClass('active');
 				})
