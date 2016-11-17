@@ -54,11 +54,30 @@
 				color: #035299 !important;
 			}
 		</style>
+		<script src="https://raw.githubusercontent.com/luis-kaufmann-silva/jquery-p2r/master/jquery.p2r.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".scroll").pullToRefresh({
+					 refresh:200
+				})
+				.on("refresh.pulltorefresh", function (){
+					location.reload();
+				});
+			});
+		</script>
 	</head>
 	<body ontouchstart="" onmouseover="">
 		<!--iframe src="http://status.pwnhs.org" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:0;">
 			Your browser doesn't support iframes
 		</iframe-->
+		<div class="scroll">
+			<div class="refresh">
+				Pull To Refresh
+			</div>
+			<div class="container">
+				content
+			</div>
+		</div>
 		<div class="navbar"><!--
 			--><div class="navbar-child active"><!--
 					--><i class="fa fa-home"></i><!--
@@ -88,41 +107,6 @@
 		--></div>
 		<script src="http://cdn.ayazhafiz.com/js/emojicons.min.js"></script>
 		<script>
-		var mouseY = 0;
-		var startMouseY = 0;
-		$('body').on('mousedown', function (ev) {
-			mouseY = ev.pageY;
-			startMouseY = mouseY;
-			$(document).mousemove(function (e) {
-				if (e.pageY > mouseY) {
-					var d = e.pageY - startMouseY;
-					console.log("d: " + d);
-					if (d >= 200)
-						location.reload();
-					$('body').css('margin-top', d/4 + 'px');
-				}
-				else
-					$(document).unbind("mousemove");
-
-
-			});
-		});
-		$('body').on('mouseup', function () {
-			$('body').css('margin-top', '0px');
-			$(document).unbind("mousemove");
-		});
-		$('body').on('mouseleave', function () {
-			$('body').css('margin-top', '0px');
-			$(document).unbind("mousemove");
-		});
-		</script>
-		<script>
-			window.onload = function() {
-				if(!window.location.hash) {
-					window.location = window.location + '#loaded';
-					history.go(0);
-				}
-			}
 			$('.navbar-child').each(function() {
 				$(this).on('touchend', function() {
 					$('.navbar-child').removeClass('active');
