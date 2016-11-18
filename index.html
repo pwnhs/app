@@ -482,7 +482,7 @@
 			$('.navbar-child').each(function() {
 				$(this).on('touchend', function() {
 					$('.navbar-child').removeClass('active');
-					$('iframe').addClass('hidden');
+					$('div.body').addClass('hidden');
 					$(this).addClass('active');
 				})
 			});
