@@ -1,93 +1,33 @@
 <html>
 	<head>
 		<title>PWNHS</title>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
         <meta name="apple-mobile-web-app-capable" content="yes">
 		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
 		<meta http-equiv="Pragma" content="no-cache"/>
 		<meta http-equiv="Expires" content="0"/>
+
 		<link href="https://fonts.googleapis.com/css?family=Raleway|Montserrat" rel="stylesheet">
-		<script src="https://use.fontawesome.com/f4adeaf9c5.js"></script>
-		<script src="./membership.js"></script>
+		<link href="./style.css" rel="stylesheet">
+
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
 				integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
 				crossorigin="anonymous"></script>
+
+    	<script src="http://cdn.ayazhafiz.com/js/md5.min.js"></script>
+		<script src="https://use.fontawesome.com/f4adeaf9c5.js"></script>
+		<script src="http://status.pwnhs.org/membership.js"></script>
+		<script src="https://raw.githubusercontent.com/luis-kaufmann-silva/jquery-p2r/master/jquery.p2r.js"></script>
+
+        <script src="http://pwnhs.org/js/bootstrap.min.js"></script>
+        <script src="http://pwnhs.org/documentation/molekule_docs.js"></script>
+        <script src="http://pwnhs.org/js/prism.min.js"></script>
+
 		<link rel="stylesheet" href="http://cdn.ayazhafiz.com/fonts/proxima-nova/stylesheet.css" media="all">
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 		<style type="text/css">.btn,a,body,h1,h2,h3,h4,p{font-family:"proxima-nova",sans-serif;}</style>
-		<style>
-			* {
-				-webkit-touch-callout: none;
-				-webkit-user-select: none;
-				-khtml-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-			}
-			.navbar {
-				position: fixed;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				text-align: center;
-				padding: 0.75vh 0vh 0.5vh 0vh;
-				margin: 0px;
-				background: rgba(236, 67, 8, 0.05);
-			}
-			.navbar-child {
-				width: 20vw;
-				margin: 0px;
-				padding: 0px;
-				display: inline-block;
-				font-size: 12px;
-				color: slategray;
-				-webkit-transition: all .1s ease-in-out;
-				-moz-transition: all .1s ease-in-out;
-				transition: all .1s ease-in-out;
-				-webkit-tap-highlight-color: rgba(0,0,0,0);
-			}
-			.navbar-child:active {
-				-webkit-transform: scale(0.85);
-				-moz-transform: scale(0.85);
-				transform: scale(0.85);
-			}
-			.label {
-				margin-top: 2px;
-			}
-			.navbar-child > i {
-				font-size: 18px;
-			}
-			.active > i, .active > .label > span {
-				color: #035299 !important;
-			}
-			.hidden {
-				display: none;
-			}
-			.scroll-wrapper {
-				position: fixed;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				top: 0;
-				-webkit-overflow-scrolling: touch;
-				overflow-y: scroll;
-			}
-			.scroll-wrapper iframe {
-				position: relative;
-				top: 0px;
-				left: 0px;
-				bottom: 0px;
-				right: 0px;
-				width: 100%;
-				height: 100%;
-				border: none;
-				margin: 0;
-				padding: 0;
-				z-index: 0;
-			}
-		</style>
-		<script src="https://raw.githubusercontent.com/luis-kaufmann-silva/jquery-p2r/master/jquery.p2r.js"></script>
 		<script>
 			$(document).ready(function(){
 				$(".scroll").pullToRefresh({
@@ -98,8 +38,18 @@
 				});
 			});
 		</script>
+
+		<!-- Google Analytics -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-81645591-1', 'auto');
+			ga('send', 'pageview');
+		</script>
 	</head>
-	<body ontouchstart="" onmouseover="">
+	<body>
 		<div class="scroll">
 			<div class="refresh">
 				Pull To sss
@@ -108,25 +58,392 @@
 				content
 			</div>
 		</div>
-		<div class="scroll-wrapper">
-			<iframe id="status" class="" src="http://status.pwnhs.org/trimmed.html">
-				Your browser doesn't support iframes
-			</iframe>
+<!-- STATUS BODY -->
+		<div id="status" class="body hidden">
+			<div style="background:#efefef;">
+				<div class="center">
+					<h2>
+						<pre class="git" style="font-size:18px;color:#fd971f;border-color:#fd971f !important;vertical-align:top;height:22px;"><span style="height:22px;padding-right:5px;vertical-align:middle;padding-bottom:20px;">YOUR STATUS</span><emoji id="set" style="position:absolute;line-height:40px;vertical-align:bottom;"></emoji>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+					</h2>
+						<br>
+						<br>
+					<span style="color:rgba(0,0,0,0.75);font-size:40px;">Type in your ID:</span>
+						<br>
+						<br>
+					<input id="student" spellcheck="false" autocomplete="off" tabindex="1" onkeypress="return isNumber(event);" maxlength="6" autofocus="autofocus" style="background:none;border:none;font-size:45px;text-align:center;border-bottom: 2px solid black;border-radius:0;text-decoration:none;width: 200px;cursor:crosshair">
+						<br>
+						<br>
+					<p id="meetings" class="hidden">2 Meetings? <i id="meetingsMark" class="fa"></i></p>
+					<p id="goodStatus" class="hidden">No penalty hours? <i id="goodStatusMark" class="fa"></i></p>
+					<span id="sad" class="hidden" style="color:rgba(252,13,27,0.5);">See an officer for your penalty hours.</span>
+
+					<script src="./status-emojis.js"></script>
+					<script src="http://cdn.ayazhafiz.com/js/emojicons.min.js"></script>
+					<script src="./status-checker.js"></script>
+				</div>
+			</div>
 		</div>
-		<div class="scroll-wrapper">
-			<iframe id="docs" class="hidden" src="http://docs.pwnhs.org/trimmed.html">
-				Your browser doesn't support iframes
-			</iframe>
-		</div>
-		<div class="scroll-wrapper">
-			<iframe id="contact" class="hidden" src="http://pwnhs.org/contact-trimmed.html">
-				Your browser doesn't support iframes
-			</iframe>
-		</div>
-		<div class="scroll-wrapper">
-			<iframe id="officer" class="hidden" src="http://officer.pwnhs.org/trimmed.html">
-				Your browser doesn't support iframes
-			</iframe>
+<!-- DOCS BODY :: NEEDS CONSIDERABLE HELP -->
+		<div id="docs" class="body" data-spy="scroll" data-target=".navspy" style="background:rgba(0, 0, 0, 0.95);font-size: 16px;color:#8597A4;font-family:montserrat;">
+			<link rel="stylesheet" type="text/css" href="http://pwnhs.org/css/prism.css" scoped>
+			<link rel='stylesheet' href='http://pwnhs.org/css/linecons.min.css'/>
+			<link rel='stylesheet' href='http://pwnhs.org/css/ionicons.min.css'/>
+        	<link href="http://pwnhs.org/fonts/dejavusansmono/stylesheet.css" rel="stylesheet" type="text/css">
+
+			<!-- Main container -->
+
+				<pre id="prenav" class="navbar-fixed full-width-unit language-" style="background:rgba(0,0,0,0.95);margin-top:0; padding-left:3%; border-top-left-radius:0;border-top-right-radius:0;border:0;"><code class="navtrack"><span><a class="side" href="//pwnhs.org" style="color:#035299;"><span class="ion ion-arrow-left-c icon-spacer"></span> BACK TO PWNHS</a></span>   <span><a href="#intro">INTRO</a></span>   <span><a href="#general">GENERAL</a></span>   <span><a href="#volhours">HOURS</a></span>   <span><a href="#approrg">APPROVED ORGANISATIONS</a></span>   <span><a href="#penhours">PENALTY HOURS</a></span>   <span><a href="#meetings">MEETINGS</a></span>   <span><a href="#obligations">MEMBER OBLIGATIONS</a></span>   <span><a href="#four-pillars">FOUR PILLARS</a></span>   <span><a href="#bylaws">BY-LAWS</a></span>   <span><a class="side" href="#faq" style="color:rgb(164,146,133);padding-top:5px;padding-bottom:5px;font-size:14px;">FAQ</a></span></code></pre>
+
+			<div id="mainContainer" class="container">
+				 <div class="row">
+
+					<div class="col-xs-9 doc-width main-content">
+						<div id="intro" class="docs-section">
+							<h1>INTRODUCTION</h1>
+								<p>
+										Welcome to the Plano West NHS Documentation. This page hosts all relevant information for PWNHS members regarding the club and its operations.
+								</p>
+							<h2>What is PWNHS?</h2>
+								<p>
+										Plano West NHS is the most monumental service organization in the greater DFW area. We are devoted to aiding the community and to exemplifying what it means to be an honor student. You can check out our <a class="keep" href="#four-pillars">Four Pillars</a> for more information on NHS foci.
+								</p>
+							<h2>Why Should I Care About PWNHS?</h2>
+								<p>
+										The National Honor Society offers many benefits, both for your social and academic experience at West. Some of these benefits may be found <a class="keep" href="http://pwnhs.org#montana">here</a>. Plus, it never hurts to say you were part of the nation's premier high school organization!
+								</p>
+						</div>
+
+						<div id="general" class="docs-section">
+							<h1>GENERAL CONSIDERATIONS</h1>
+								<br>
+							<h2>Volunteer Hours</h2>
+								<p>
+										Members must complete <span class="emph">15 hours</span> of volunteer service each semester to remain in good standing with the Plano West NHS. Be sure that your NHS hours come from approved organizations and that you abide by our <a class="keep" href="#rest">restrictions</a>.
+								</p>
+							<h2>Penalty Hours</h2>
+								<p>
+										They accumulate quickly! <span class="emph">2</span> penalty hours are served for an absence at a mandatory meeting, <span class="emph">missed + 5</span> hours are required for every semester you don't complete 15 hours. Refrain from ever getting penalty hours, and complete them quickly if you do. Our <a class="keep" href="#penhours">penalty hours</a> tab dives into more detail.
+								</p>
+							<h2>Obligations</h2>
+								<p>
+										Make sure to observe honorable behavior. Violation of the law, the school conduct code, or academic integrity will result in immediate expulsion. Review your obligations <a class="keep" href="#obligations">here</a>.
+								</p>
+						</div>
+
+						<div id="volhours" class="docs-section">
+							<h1>VOLUNTEER HOURS</h1>
+								<p>
+										Volunteering is a <span style="font-weight:bold;">huge</span> part of NHS. Your ability to aid the community around you goes a long way to demonstrating your capabilities as an individual. We're sure that you will do many amazing things during your time proffered this year.
+								</p>
+							<h2>Hours Sheet</h2>
+								<p>
+										You can download the PWNHS volunteer hours sheet next to this block.<a href="http://pwnhs.org/files/NHS%20Hours%20Sheet.docx" class="btn  chill  btn-wire btn-xs pull-right" download><span class="fa fa-download icon-spacer"></span>Download Hours Sheet (.docx)</a>
+								</p>
+						<div id="guid">
+							<h2>Guidelines for Hours</h2>
+						</div>
+								<p>
+										Please keep in mind that when filling out your sheet, there should be <span class="emph">no crossing out</span> or rewriting of hours, names, or signatures - this is required to eliminate suspicion of fraud. If you must cross out a parameter, cross out the entire box and start another one.
+									<br>
+									<br>
+										All members must complete <span class="emph">15 hours</span> volunteer hours each semester. <span class="emph">No double dipping!</span> Hours turned in for NHS do not count for another club, and vice versa; we do cross-check.
+									<br>
+									<br>
+										All fall hours must be turned in by <span class="emph">Dec. 1</span>.
+								</p>
+						<div id="rest">
+							<h2>Restrictions</h2>
+						</div>
+								<p>
+										Up to <span class="emph">10</span> hours from the <span class="emph">summer</span> may count towards NHS, and may only be redeemed during the fall semester.
+									<br>
+									<br>
+										Up to <span class="emph">10</span> hours from <span class="emph">one organization</span> may count towards NHS. The rest must be from other sources.
+									<br>
+									<br>
+										Don't wear yourself out! You may only volunteer <span class="emph">8</span> hours at a time (at one organization on one day).
+									<br>
+									<br>
+										Only <span class="emph">5</span> hours may be from PTSA/Booster Club events. In addition, these events must be approved by the PWNHS. Approval is done on a case-by-case, rolling basis, so <a class="keep" href="contact">contact us </a> as soon as possible if you think you may want to use one of these events for your hours!
+									<br>
+									<br>
+										The organizations you volunteer at must be sanctioned as <span class="emph">"approved"</span> by either the national branch of the NHS or the local PWNHS. <a class="keep" href="#approrg">Don't know if your organization is approved?</a>
+									<br>
+									<br>
+										As unfortunate as it may be, only secular participation for approved organizations is accepted for NHS hours. In other words,<span class="emph">no religiously-afilliated</span> volunteering may be used for your NHS volunteer hours. This includes, but is not limited to, church/mosque/temple events, religious charity, and the like. However, if a community event is held at one of these locations or they are aiding the community without promoting the religious or political view, volunteer hours are acceptable. <span class="emph">For example</span>: Vacation Bible Schools would not be allowed but a food pantry at the same church would be allowed.
+									<br>
+									<br>
+										<span class="emph">Donation does not</span> count as volunteering. Members may not recieve hours for donating items or money, but they can receive hours for helping to sort donations at a collection site or helping organize and assist during a fundraiser.
+									<br>
+									<br>
+										Students who are part of any organization and volunteer at an event the organization is sponsoring may receive volunteer hours if they are not required by the organization to attend, or if it goes above and beyond their requirements. This includes some organizations at West, Eagle Scouts, Boy and Girl Scouts.
+									<br>
+									<br>
+										Helping teachers <span class="emph">WILL NOT COUNT FOR NHS HOURS</span>.
+								</p>
+						</div>
+
+						<div id="approrg" class="docs-section">
+							<h1>APPROVED ORGANIZATIONS</h1>
+								<p>
+										The national branch of the NHS requires that members volunteer only at organizations approved by local branches. This section discusses PWNHS-approved organizations, and how you can get your organization approved if you feel it should count for NHS hours as well.
+								</p>
+							<h2>List</h2>
+								<p>
+										You can visit the list of approved organizations next to this block. <a href="https://docs.google.com/document/d/1Onoejbk8YHy0AXFlCEtfqjPJasvwSGhbuEPW_cmWVIs/edit?usp=sharing" class="btn  chill  btn-wire btn-xs pull-right" target="_blank"><span class="fa fa-file-text icon-spacer"></span>Visit Approved Organizations list (.gdoc)</a>
+									<br>
+									<br>
+										Check to make sure that the organization you plan to volunteer for is listed in the document. If it's not, check below for what to do! (We suggest you check your organization's standing at least two weeks before volunteering in case you must submit an approval form.)
+									<br>
+									<br>
+										Note: You <span class="emph">will not</span> receive hours for volunteering at an event or for an organization that is not on the "approved" list or has not been cleared by the PWNHS.
+								</p>
+							<h2>Applying for Approval</h2>
+								<p>
+										You can download the organization approval form next to this block. <a href="http://pwnhs.org/files/NHS%20Org%20Approval%20Form.docx" class="btn  chill  btn-wire btn-xs pull-right" download><span class="fa fa-download icon-spacer"></span>Download Approval Form (.docx)</a>
+									<br>
+									<br>
+										We want to provide all of our members an opportunity to volunteer at rewarding and enjoyable institutions. If you wish to give time to a particular location that you know adheres to NHS guidelines but is not listed on the approved organizations list, you can fill out the approval form for your organization to be considered.
+									<br>
+									<br>
+										For your organization/event to be evaluated, please fill out approval form and <a class="keep" href="mailto:pwestnhs@gmail.com?subject=Approval%20Form">email it</a> to us at least <span class="emph">two weeks</span> before the date of your volunteering. Please write emails clearly; for example, if a O and a 0 or 1 and l look similar, help us distinguish! If you do not recieve a response within a business week, contact one of the <a class="keep" href="team">officers</a> directly.
+									<br>
+									<br>
+										Note: If you've submitted an approval form for a long-term organization and it has been <span class="emph">approved but is NOT listed</span> on the list of approved organizations, don't worry! Not all events we approve will be added to this list.
+								</p>
+							<h2>Relationships</h2>
+								<p>
+										The Plano West NHS encourages you to build a lasting, concerted relationship with one or more of the organizations you volunteer at and to give back to your community on a regular basis. It looks great, and makes you feel even better!
+								</p>
+						</div>
+
+						<div id="penhours" class="docs-section">
+							<h1>PENALTY HOURS</h1>
+								<p>
+										Sometimes you can't make two meetings or aren't able to finish all your hours. That's okay! But to be fair to all of our members and adhere to NHS guidelines, we must give penalty hours to all those who are not able to fulfill PWNHS requirements.
+								</p>
+							<h2>What Incites Penalty Hours?</h2>
+								<p>
+										Failure to complete the 15 required volunteer hours each semester will result in penalty hours for the next semester. The number of penalty hours will be defined as the <span class="emph">number of uncompleted hours + 5</span>. For instance, if you only finish 12 hours one semester, you will have missed 3 and have to make up 3 + 5 = <span class="emph">8</span> hours the next semester <span class="emph">in addition to</span> the normal, required 15 hours per semester (i.e. you will have to do 15 + 8 = 23 hours in total for the next semester).
+									<br>
+									<br>
+										You are required to attend two of four PWNHS meetings each semester. Failure to miss one required meeting will result in <span class="emph">2 penalty hours</span>. Failure to miss both required meetings will result in <span class="emph">4 penalty hours</span>. Penalty hours for missed meetings must be turned in the same semester they were dealt.
+									<br>
+									<br>
+										<span class="emph">5 penalty hours</span> will be served to those who do not submit their <span class="emph">Obligation Form</span> or <span class="emph">Dues</span> by September 21, or who do not submit their fall hours by <span class="emph">4:30 PM, December 1</span>.
+									<br>
+									<br>
+										<code class="codel" style="font-size:18px !important;">DEADLINES ARE EXTREMELY STRICT!</code>
+								</p>
+							<h2>Completing Penalty Hours</h2>
+								<p>
+										This year, we are asking our members to turn in their regular volunteer hours and penalty hours jointly. Therefore, the penalty hours sheet is the same as the <a class="keep" href="#volhours">regular hours sheet</a>.
+									<br>
+									<br>
+										Turn in your penalty hours sheet(s) together with your regular hours sheets by the required due date(s). Your completion of penalty hours must abide by the same <a class="keep" href="#guid">guidelines</a> and <a class="keep" href="#rest">restrictions</a> as your regular volunteer hours.
+								</p>
+						</div>
+
+						<div id="meetings" class="docs-section">
+							<h1>MEETINGS</h1>
+								<p>
+										Meetings are our primary opportunity to interact with the PWNHS community and provide you with updates on the club and our incessant progress. They may be big, but they hold a lot of essential information.
+								</p>
+							<h2>General</h2>
+								<p>
+										Meetings are held on the following specified dates during <span class="emph">A/B Lunch</span>. Other important dates, including due dates, are included:
+								</p>
+									<br>
+											<ul style="margin-left:25px;">
+												<li style="list-style: circle !important;">
+													Wed, August 31 - <span class="emph">Senior</span> Informational Meeting
+												</li>
+												<li style="list-style: circle !important;">
+													Thur, September 1 - <span class="emph">Junior</span> Informational Meeting
+												</li>
+												<li style="list-style: circle !important;">
+													Tues, September 13 - Growth Meeting for members who <span class="emph">plan to participate in</span>: Plano Balloon Festival, PWSH Homecoming Parade Cleanup, PWSH Open House Volunteers, or Turkey Trot
+												</li>
+												<li style="list-style: circle !important;">
+													Wed, September 21 - Obligation forms, annual dues, and t-shirt orders due by <span class="emph">4:30 PM</span>.
+												</li>
+												<li style="list-style: circle !important;">
+													Tues, October 11 - <span class="emph">Senior</span> Growth Meeting with Guest Speaker
+												</li>
+												<li style="list-style: circle !important;">
+													Tues, October 18 - <span class="emph">Junior</span> Growth Meeting with Guest Speaker
+												</li>
+												<li style="list-style: circle !important;">
+													Tues, November 1 - <span class="emph">Catch-all</span> Final Fall Growth Meeting
+												</li>
+												<li style="list-style: circle !important;">
+													Thur, December 1 - Fall Volunteer Hours due by <span class="emph">4:30 PM</span>
+												</li>
+											</ul>
+									<br>
+								<p>
+										Of the four meetings each semester, you are required to attend two. During the fall, you must attend the first meeting (<span class="emph">informational</span>) and one of the other three meetings (<span class="emph">growth</span>).
+								</p>
+							<h2>Miss a Meeting?</h2>
+								<p>
+										If you miss a meeting, don't fret! Attend another one so that you can get the two you need.
+									<br>
+									<br>
+										Try not to miss our informational meeting, as it is the keynote meeting of the year. If you are unlucky enough to be unable to make it, make up the meeting by attending <span class="emph">two growth meetings</span>. Or, you can just do <span class="emph">two <a class="keep" href="#penhours" style="font-size:14px;">penalty hours</a></span>  in addition to the required 15 regular hours.
+								</p>
+						</div>
+
+						<div id="obligations" class="docs-section">
+							<h1>MEMBER OBLIGATIONS</h1>
+								<p>
+										The Plano West NHS strives to maintain an active, interconnected, and virtuous community of members. In order to achieve this ever-continuous goal, we require our members to commit themselves to some basic obligations.
+								</p>
+							<h2>Obligation Form</h2>
+								<p>
+										You can download the Obligation Form next to this block. <a href="http://pwnhs.org/files/NHS%20Member%20Obligations.docx" class="btn  chill  btn-wire btn-xs pull-right" download><span class="fa fa-download icon-spacer"></span>Download Obligations (.docx)</a>
+									<br>
+									<br>
+										All PWNHS members must submit this form following the introductory (first) meeting of the fall semester, alongside their $6 dues, by <span class="emph">September 21</span> to <span class="emph">Room 2013</span>.
+								</p>
+							<h2>Membership Qualifications</h2>
+								<p>
+										To become a member of the Plano West NHS, you must have attended <span class="emph">Plano West</span>, <span class="emph">Jasper</span>, or <span class="emph">Shepton</span> for a <span class="emph">semester</span> at minimum. New candidates to the PWNHS will be reviewed and approved by a majority vote of the faculty council before induction. New candidates are required to attend induction in order to achieve standing as official members.
+									<br>
+									<br>
+										Note: If you were a part of NHS your sophmore year at Jasper/Shepton, or part of NHS your junior year at West, you are <span class="emph">automatically accepted into PWNHS</span>. Seniors who were not in NHS their junior year cannot join PWNHS. If you wish to join NHS and were not a member in 10th grade, you must do so at the start of your junior year. The national guidelines state that members must be inducted prior to their senior year. Juniors go through the probationary period in the fall and are inducted in the spring. No one can decide in January that he or she would like to join.
+								</p>
+							<h3>Transfer Students</h3>
+								<p>
+										Transfer students must bring a <span class="emph">letter of good standing</span> from their previous principal or NHS chapter advisor, at which point they will be automatically accepted as a member of the PWNHS. <span class="emph">Jasper/Shepton members are not transfer students.</span>
+								</p>
+							<h2>Membership Requirements</h2>
+								<p>
+										All PWNHS members must have a minimum <span class="emph">3.60 GPA</span>. No rounding, no exceptions!
+									<br>
+									<br>
+										Members are expected to contribute <span class="emph">$6</span> in membership dues at the start of the year. These dues help fund national membership fees, special events and projects, meeting supplies, guest speakers, and internal PWNHS ventures. Dues must be submitted with the obligation form by <span class="emph">September 21</span> to <span class="emph">Room 2013</span>. T-Shirts are not included in the membership dues, and will be sold starting September. T-Shirt orders will also be due <span class="emph">September 21</span>.
+									<br>
+									<br>
+										Members are expected to complete <span class="emph">15</span> hours of community service per semester. These hours may not be counted for or used for any other purpose. <span class="emph">10 summer hours</span> may be applied to the fall semester only. All fall semester hours must be turned in by <span class="emph">December 1st</span> to room 2013. More information on hours can be found <a href="#volhours" class="keep">here</a>.
+									<br>
+									<br>
+										Members must attend <span class="emph">2 meetings</span> per semester. Read up on PWNHS meetings <a class="keep" href="#meetings">here</a>.
+									<br>
+									<br>
+										Members <span class="emph">must not violate</span> the law, the school conduct code, or academic integrity in order to remain in good standing with the club. Information on consequences of such actions may be found below.
+								</p>
+							<h2>Discipline and Dismissal Policy</h2>
+								<p>
+										Violations of the law, the school conduct code, or academic integrity will result in <span class="emph">probation</span>, <span class="emph">additional hours</span>, or <span class="emph">dismissal</span> as decided and enforced by the PWNHS core / faculty council on a case-by-case basis.
+									<br>
+									<br>
+										If the PWNHS suggests the dismissal of a member, the condition will be decided by the faculty council. A <span class="emph">majority vote</span> (½ + 1) is required for the motion of dismissal to pass. No veto is enabled.
+									<br>
+									<br>
+										To resign one's position as a PWNHS/NHS member, he or she must <a class="keep" href="contact">directly contact</a> the PWNHS core.
+									<br>
+									<br>
+										<span class="emph">Members who resign or are dismissed may not rejoin</span> the PWNHS at a later time.
+								</p>
+						</div>
+
+						<div id="four-pillars" class="docs-section-cut">
+							<h1>FOUR PILLARS</h1>
+						</div>
+
+						<div id="contain-unit-list">
+							<div class="contain-icon expansion docs-section-icon ">
+								<div class="text-center">
+									<span class="fa fa-male icon-md-lg ex1"></span>
+								</div>
+								<h3 class="text-center">
+										Character
+								</h3>
+								<p class="text-center twoline" style="font-size: 12px;">
+										NHS seeks to develop students with responsible citizenship demonstrated in all their actions.
+								</p>
+							</div>
+							<div class="contain-icon expansion docs-section-icon">
+								<div class="text-center">
+									<span class="fa fa-university icon-md-lg ex2"></span>
+								</div>
+								<h3 class="text-center">
+										Scholarship
+								</h3>
+								<p class="text-center twoline" style="font-size: 12px;">
+										We want to create an enthusiasm for knowledge, characterized by a commitment to learning.
+								</p>
+							</div>
+							<div class="contain-icon expansion docs-section-icon">
+								<div class="text-center">
+									<span class="fa fa-hand-rock-o icon-md-lg ex3"></span>
+								</div>
+								<h3 class="text-center">
+										Leadership
+								</h3>
+								<p class="text-center twoline" style="font-size: 12px;">
+										Promoting direction by taking the initiative to aid others in our daily activities is core to our philosophy.
+								</p>
+							</div>
+							<div class="contain-icon expansion docs-section-icon">
+								<div class="text-center">
+									<span class="fa fa-heartbeat icon-md-lg ex4"></span>
+								</div>
+								<h3 class="text-center">
+										Service
+								</h3>
+								<p class="text-center twoline" style="font-size: 12px;">
+										Members should stimulate a personal desire to render service for the benefit of those in need.
+								</p>
+							</div>
+						</div>
+
+						<div id="bylaws" class="docs-section">
+							<h1>BY-LAWS</h1>
+								<p>
+										We encourage all of our members to read up on NHS legal documentation and to be well-versed in our practices. Here we host the by-laws of the PWNHS/NHS.
+								</p>
+							<h2>PWNHS / Local</h2>
+								<p>
+										You can download the PWNHS By-Laws next to this block. <a href="#" class="btn  chill  btn-wire btn-xs pull-right" download><span class="fa fa-download icon-spacer"></span>Nothing to download yet!</a>
+								</p>
+						</div>
+
+						<div id="faq" class="docs-section">
+							<h1 style="color:rgb(164,146,133);border-top:1px solid rgb(164,146,133);padding-top:5px;border-bottom:1px solid rgb(164,146,133);padding-bottom:5px;">FREQUENTLY ASKED QUESTIONS</h1>
+						<br>
+							<h2>Do summer volunteer hours count towards NHS?</h2>
+								<p>
+										Yes, up to ten hours from the summer can be used for the fall semester.
+								</p>
+							<h2>If I do more than fifteen hours in one semester, can they rollover to the next?</h2>
+								<p>
+										Although it's amazing that you did more than fifteen hours, and we always encourage our members to go above and beyond, no. We want to see that you consistently contribute to your community throughout the entire year. Still amazing though.
+								</p>
+							<h2>When do I have to finish penalty hours?</h2>
+								<p>
+										Penalty hours must be completed and submitted the same semester they are served.
+								</p>
+							<h2>How long will it take for my organization to be approved?</h2>
+								<p>
+										One week, but it must be submitted two weeks in advance of your planned volunteer date.
+								</p>
+							<h2>What about national awards, like the Gold Volunteer Award?</h2>
+								<p>
+										Don't worry, we're working on it!
+								</p>
+							<h2>When will officer applications be released?</h2>
+								<p>
+										About halfway through February.
+								</p>
+						</div>
+
+					</div>
+					<!-- Content END -->
+
+				</div>
+			</div>
+			<!-- Main container END -->
 		</div>
 		<div class="navbar"><!--
 			--><div id="home-trigger" class="navbar-child active"><!--
@@ -160,6 +477,7 @@
 				e.preventDefault();
 			});
 		</script>
+
 		<script>
 			$('.navbar-child').each(function() {
 				$(this).on('touchend', function() {
