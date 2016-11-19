@@ -210,7 +210,7 @@ body, .body {
 }
 body {
     height: 100%;
-    overflow: hidden;
+    overflow: scroll;
 }
 .scroll, .scroll-y, .scroll-x {
     -webkit-overflow-scrolling: touch;
