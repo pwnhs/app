@@ -208,15 +208,6 @@ body, .body {
 	padding: 0px;
 	color: #8597A4;
 }
-.scroll, .scroll-y, .scroll-x {
-    -webkit-overflow-scrolling: touch;
-}
-.scroll > *, .scroll-y > *, .scroll-x > * {
-    -webkit-transform : translateZ(0);
-}
-.scroll { overflow: scroll; }
-.scroll-y { overflow-y: scroll; }
-.scroll-x { overflow-x: scroll; }
 
 /* Headers */
 
