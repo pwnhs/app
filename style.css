@@ -197,19 +197,17 @@ ul {
 }
 */
 body {
-  -webkit-user-select: none;
-     -moz-user-select: -moz-none;
-      -ms-user-select: none;
-          user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: -moz-none;
+	    -ms-user-select: none;
+		    user-select: none;
+	-webkit-font-smoothing: antialiased;
+	overflow-y: scroll;
 }
 body, .body {
 	margin: 0px;
 	padding: 0px;
 	color: #8597A4;
-}
-
-body{
-    -webkit-font-smoothing: antialiased;
 }
 
 /* Headers */
