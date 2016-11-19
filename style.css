@@ -1,5 +1,191 @@
 /* = Global type styling
 -------------------------------------------------------------- */
+@font-face { font-family: 'Glyphicons Halflings'; src: url(http://docs.pwnhs.org/fonts/glyphicons-halflings-regular.eot?#iefix) format(embedded-opentype), url(http://docs.pwnhs.org/fonts/glyphicons-halflings-regular.woff2) format(woff2), url(http://docs.pwnhs.org/fonts/glyphicons-halflings-regular.woff) format(woff), url(http://docs.pwnhs.org/fonts/glyphicons-halflings-regular.ttf) format(truetype), url(http://docs.pwnhs.org/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format(svg); }
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.container {
+		width: 750px;
+	}
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.container {
+		width: 970px;
+	}
+
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.btn {
+	-webkit-user-select: none;
+	background-image: none;
+	border-color: transparent;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-bottom: 0px;
+	padding-bottom: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 1px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.codel {
+	background-color: rgb(249, 242, 244);
+	border-radius: 4px;
+	color: rgb(199, 37, 78);
+	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-size: 90%;
+	padding-bottom: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 2px;
+}
+
+.col-xs-9 {
+	float: left;
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: relative;
+	width: 75%;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.navtrack {
+	background-color: transparent;
+	border-radius: 0px;
+	color: inherit;
+	font-size: inherit;
+	padding: 0px;
+	white-space: pre-wrap;
+}
+
+.row {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+a {
+	background-color: transparent;
+	color: rgb(51, 122, 183);
+	text-decoration: none;
+}
+
+body {
+	color: rgb(51, 51, 51);
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	margin: 0px;
+}
+
+h1 {
+	color: inherit;
+	font-family: inherit;
+	font-size: 36px;
+	font-weight: 500;
+	line-height: 1.1;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 20px;
+}
+
+h2 {
+	color: inherit;
+	font-family: inherit;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 1.1;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+h3 {
+	color: inherit;
+	font-family: inherit;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.1;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+html {
+	-webkit-tap-highlight-color: transparent;
+	font-family: sans-serif;
+	font-size: 10px;
+}
+
+p {
+	font-family: proxima-nova, sans-serif;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+}
+
+pre {
+	background-color: rgb(245, 245, 245);
+	border-color: rgb(204, 204, 204);
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 1px;
+	color: rgb(51, 51, 51);
+	display: block;
+	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-size: 13px;
+	line-height: 1.42857143;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	overflow: auto;
+	padding: 9.5px;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+span a {
+	font-family: proxima-nova, sans-serif;
+}
+
+ul {
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+
 /*
 * {
 	-webkit-touch-callout: none;
