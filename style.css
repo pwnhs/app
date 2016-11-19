@@ -196,6 +196,12 @@ ul {
 	user-select: none;
 }
 */
+body {
+  -webkit-user-select: none;
+     -moz-user-select: -moz-none;
+      -ms-user-select: none;
+          user-select: none;
+}
 body, .body {
 	margin: 0px;
 	padding: 0px;
