@@ -516,6 +516,9 @@
 					$('body').css('background', '');
 				})
 			});
+			$('#home-trigger').on('touchend', function() {
+				$('#pull').removeClass('hidden');
+			});
 			$('#status-trigger').on('touchend', function() {
 				$('#status').removeClass('hidden');
 			});
