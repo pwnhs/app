@@ -52,6 +52,7 @@
         <script src="http://pwnhs.org/documentation/molekule_docs.js"></script>
 	</head>
 	<body>
+
 <!-- STATUS BODY -->
 		<div id="status" class="body hidden">
 			<div style="background:#efefef;">
@@ -77,7 +78,8 @@
 				</div>
 			</div>
 		</div>
-<!-- DOCS BODY :: NEEDS CONSIDERABLE HELP -->
+
+<!-- DOCS BODY -->
 		<div id="docs" class="body hidden" data-spy="scroll" data-target=".navspy" style="background:rgba(0, 0, 0, 0.95) !important;font-size: 16px;color:#8597A4;font-family:montserrat;">
 			<link rel="stylesheet" type="text/css" href="http://pwnhs.org/css/prism.css" scoped>
 			<link rel='stylesheet' href='http://pwnhs.org/css/linecons.min.css'/>
@@ -552,7 +554,7 @@
 
 		<script src="./officer-checker.js"></script>
 
-
+<!-- NAVBAR -->
 		<div class="navbar"><!--
 			--><div id="home-trigger" class="navbar-child active"><!--
 					--><i class="fa fa-home"></i><!--
@@ -581,6 +583,9 @@
 			</div><!--
 		--></div>
 
+<!-- SCRIPTS -->
+
+	<!-- no double tap -->
 		<script>
 		// jQuery no-double-tap-zoom plugin
 
@@ -629,12 +634,14 @@
 		$('body').nodoubletapzoom();
 		</script>
 
+	<!-- no text selection -->
 		<script>
 			document.addEventListener('gesturestart', function (e) {
 				e.preventDefault();
 			});
 		</script>
 
+	<!-- navbar functionality -->
 		<script>
 			$('.navbar-child').each(function() {
 				$(this).on('touchend', function() {
@@ -664,5 +671,11 @@
 				$('#officer').removeClass('hidden');
 			});
 		</script>
+
+<!-- END CONTENT -->
+
 	</body>
+
+<!-- END PAGE -->
+
 </html>
