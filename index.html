@@ -571,8 +571,8 @@
 					</span>
 				</div>
 			</div>
-			<code id="version" style="font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color:palevioletred;"><code class="git">v 1.0.0</code></code>
 		</div>
+			<code id="version" style="font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color:palevioletred;"><code class="git" style="color:maroon">v1.0.3</code></code>
 		<script src="./officer-checker.js"></script>
 
 <!-- NAVBAR -->
@@ -600,7 +600,7 @@
 			--><div id="officer-trigger" class="navbar-child"><!--
 					--><i class="fa fa-gear"></i><!--
 				--><br><!--
-					--><div class="label"><span>Officer</span></div>
+					--><div class="label"><span>Scene</span></div>
 			</div><!--
 		--></div>
 
@@ -608,7 +608,7 @@
 
 	<!-- set version height -->
 		<script>
-			var bottomHeight = 1.5 * $('#bottom-navbar').height();
+			var bottomHeight = 1.75 * $('#bottom-navbar').height();
 			$('#version').css('bottom', bottomHeight);
 		</script>
 
@@ -697,7 +697,7 @@
 			$('#contact-trigger').on('touchend', function() {
 				$('#contact').removeClass('hidden');
 			});
-			$('#officer-trigger').on('click', function() {
+			$('#officer-trigger').on('touchend', function() {
 				$('#officer').removeClass('hidden');
 			});
 		</script>
