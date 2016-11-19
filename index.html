@@ -475,7 +475,7 @@
 		// jQuery no-double-tap-zoom plugin
 
 		// Triple-licensed: Public Domain, MIT and WTFPL license - share and enjoy!
-		var notSwiped = true;
+		/*var notSwiped = true;
 		$(function() {
 			$('body')
 				.on('mousedown touchstart', function (e) {
@@ -492,12 +492,12 @@
 					}
 				})
 			;
-		})(jQuery);
+		})(jQuery);*/
 
 		(function($) {
 		  var IS_IOS = /iphone|ipad/i.test(navigator.userAgent);
 		  $.fn.nodoubletapzoom = function() {
-			if (IS_IOS && notSwiped) {
+			if (IS_IOS) {
 			  $(this).bind('touchstart', function preventZoom(e) {
 				var t2 = e.timeStamp
 				  , t1 = $(this).data('lastTouch') || t2
