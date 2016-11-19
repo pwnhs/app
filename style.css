@@ -208,6 +208,10 @@ body, .body {
 	padding: 0px;
 	color: #8597A4;
 }
+body {
+    height: 100%;
+    overflow: hidden;
+}
 
 /* Headers */
 
