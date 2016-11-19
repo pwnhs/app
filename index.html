@@ -571,13 +571,12 @@
 					</span>
 				</div>
 			</div>
+			<code id="version" style="font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color:palevioletred;"><code class="git">v 1.0.0</code></code>
 		</div>
-
-
 		<script src="./officer-checker.js"></script>
 
 <!-- NAVBAR -->
-		<div class="navbar"><!--
+		<div id="bottom-navbar" class="navbar"><!--
 			--><div id="home-trigger" class="navbar-child active"><!--
 					--><i class="fa fa-home"></i><!--
 				--><br><!--
@@ -607,53 +606,59 @@
 
 <!-- SCRIPTS -->
 
+	<!-- set version height -->
+		<script>
+			var bottomHeight = 1.5 * $('#bottom-navbar').height();
+			$('#version').css('bottom', bottomHeight);
+		</script>
+
 	<!-- no double tap -->
 		<script>
-		// jQuery no-double-tap-zoom plugin
+			// jQuery no-double-tap-zoom plugin
 
-		// Triple-licensed: Public Domain, MIT and WTFPL license - share and enjoy!
-		/*
-		var notSwiped = true;
-		$(function() {
-			$('body')
-				.on('mousedown touchstart', function (e) {
-					console.log("(x,y) = (" + e.pageX + "," + e.pageY +")");
-					xDown = e.pageX;
-					yDown = e.pageY;
-				})
-				.on('mouseup touchend',function (e) {
-					console.log("(x,y) = (" + e.pageX + "," + e.pageY +")");
-					xUp = e.pageX;
-					yUp = e.pageY;
-					if (xDown != xUp || yDown != yUp) {
-						notSwiped = false;
-					}
-				})
-			;
-		})(jQuery);
-		*/
+			// Triple-licensed: Public Domain, MIT and WTFPL license - share and enjoy!
+			/*
+			var notSwiped = true;
+			$(function() {
+				$('body')
+					.on('mousedown touchstart', function (e) {
+						console.log("(x,y) = (" + e.pageX + "," + e.pageY +")");
+						xDown = e.pageX;
+						yDown = e.pageY;
+					})
+					.on('mouseup touchend',function (e) {
+						console.log("(x,y) = (" + e.pageX + "," + e.pageY +")");
+						xUp = e.pageX;
+						yUp = e.pageY;
+						if (xDown != xUp || yDown != yUp) {
+							notSwiped = false;
+						}
+					})
+				;
+			})(jQuery);
+			*/
 
-		(function($) {
-		  var IS_IOS = /iphone|ipad/i.test(navigator.userAgent);
-		  $.fn.nodoubletapzoom = function() {
-			if (IS_IOS) {
-			  $(this).bind('touchstart', function preventZoom(e) {
-				var t2 = e.timeStamp
-				  , t1 = $(this).data('lastTouch') || t2
-				  , dt = t2 - t1
-				  , fingers = e.originalEvent.touches.length;
-				$(this).data('lastTouch', t2);
-				if (!dt || dt > 500 || fingers > 1) return; // not double-tap
+			(function($) {
+			  var IS_IOS = /iphone|ipad/i.test(navigator.userAgent);
+			  $.fn.nodoubletapzoom = function() {
+				if (IS_IOS) {
+				  $(this).bind('touchstart', function preventZoom(e) {
+					var t2 = e.timeStamp
+					  , t1 = $(this).data('lastTouch') || t2
+					  , dt = t2 - t1
+					  , fingers = e.originalEvent.touches.length;
+					$(this).data('lastTouch', t2);
+					if (!dt || dt > 500 || fingers > 1) return; // not double-tap
 
-				e.preventDefault(); // double tap - prevent the zoom
-				// also synthesize click events we just swallowed up
-				$(this).trigger('click').trigger('click');
-			  });
-			}
-		  };
-		})(jQuery);
+					e.preventDefault(); // double tap - prevent the zoom
+					// also synthesize click events we just swallowed up
+					$(this).trigger('click').trigger('click');
+				  });
+				}
+			  };
+			})(jQuery);
 
-		$('body').nodoubletapzoom();
+			$('body').nodoubletapzoom();
 		</script>
 
 	<!-- no text selection -->
@@ -692,7 +697,7 @@
 			$('#contact-trigger').on('touchend', function() {
 				$('#contact').removeClass('hidden');
 			});
-			$('#officer-trigger').on('touchend', function() {
+			$('#officer-trigger').on('click', function() {
 				$('#officer').removeClass('hidden');
 			});
 		</script>

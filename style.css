@@ -1219,3 +1219,11 @@ pre.git {
 .voffset-lg{
 	margin-top:80px;
 }
+
+#version {
+	position: fixed;
+	right: 0;
+	left: 0;
+	text-align: center;
+	margin: 0px;
+}
