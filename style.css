@@ -208,10 +208,6 @@ body, .body {
 	padding: 0px;
 	color: #8597A4;
 }
-body {
-    height: 100%;
-    overflow: scroll;
-}
 .scroll, .scroll-y, .scroll-x {
     -webkit-overflow-scrolling: touch;
 }
