@@ -509,6 +509,9 @@
 				$(this).on('touchend', function() {
 					$('.navbar-child').removeClass('active');
 					$('div.body, #pull').addClass('hidden');
+					if ($(this).hasClass('active')) {
+						$("html, body").animate({ scrollTop: 0 }, "slow");
+					}
 					$(this).addClass('active');
 					$('body').css('background', '');
 				})
