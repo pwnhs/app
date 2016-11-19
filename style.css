@@ -212,15 +212,6 @@ body {
     height: 100%;
     overflow: hidden;
 }
-.scroll, .scroll-y, .scroll-x {
-    -webkit-overflow-scrolling: touch;
-}
-.scroll > *, .scroll-y > *, .scroll-x > * {
-    -webkit-transform : translateZ(0);
-}
-.scroll { overflow: auto; }
-.scroll-y { overflow-y: auto; }
-.scroll-x { overflow-x: auto; }
 
 /* Headers */
 
@@ -983,15 +974,21 @@ g.coFade{
     width:100%;
 }
 .modProx, div.show-swal2{
-    font-family: "Montserrat", sans-serif !important;
-    font-weight: 300 !important;
+    font-family: "proxima-nova", sans-serif !important;
+    font-weight: 400 !important;
 }
 div.swal2-modal h2, div.swal2-modal button{
     font-family: "proxima-nova", sans-serif !important;
-    font-weight: 300 !important;
+    font-weight: 400 !important;
 }
 div.swal2-content{
     height: 25px !important;
+}
+.swal2-modal > input {
+	font-family: "montserrat" !important;
+	font-weight: 200;
+	font-size: 16px !important;
+	color: #8597A4;
 }
 .navbar {
 	position: fixed;
