@@ -12,9 +12,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Raleway|Montserrat" rel="stylesheet">
 		<link href="./style.css" rel="stylesheet">
 
-		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-				integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
-				crossorigin="anonymous"></script>
+        <script src="http://pwnhs.org/js/jquery-2.1.0.min.js"></script>
 
     	<script src="http://cdn.ayazhafiz.com/js/md5.min.js"></script>
 		<script src="https://use.fontawesome.com/f4adeaf9c5.js"></script>
@@ -22,7 +20,6 @@
 		<script src="https://raw.githubusercontent.com/luis-kaufmann-silva/jquery-p2r/master/jquery.p2r.js"></script>
 
         <script src="http://pwnhs.org/js/bootstrap.min.js"></script>
-        <script src="http://pwnhs.org/documentation/molekule_docs.js"></script>
         <script src="http://pwnhs.org/js/prism.min.js"></script>
 
 		<link rel="stylesheet" href="http://cdn.ayazhafiz.com/fonts/proxima-nova/stylesheet.css" media="all">
@@ -48,6 +45,8 @@
 			ga('create', 'UA-81645591-1', 'auto');
 			ga('send', 'pageview');
 		</script>
+
+        <script src="http://pwnhs.org/documentation/molekule_docs.js"></script>
 	</head>
 	<body>
 		<div class="scroll">
@@ -73,7 +72,7 @@
 					<input id="student" spellcheck="false" autocomplete="off" tabindex="1" onkeypress="return isNumber(event);" maxlength="6" autofocus="autofocus" style="background:none;border:none;font-size:45px;text-align:center;border-bottom: 2px solid black;border-radius:0;text-decoration:none;width: 200px;cursor:crosshair">
 						<br>
 						<br>
-					<p id="meetings" class="hidden">2 Meetings? <i id="meetingsMark" class="fa"></i></p>
+					<p id="meetingsA" class="hidden">2 Meetings? <i id="meetingsMark" class="fa"></i></p>
 					<p id="goodStatus" class="hidden">No penalty hours? <i id="goodStatusMark" class="fa"></i></p>
 					<span id="sad" class="hidden" style="color:rgba(252,13,27,0.5);">See an officer for your penalty hours.</span>
 
@@ -84,7 +83,7 @@
 			</div>
 		</div>
 <!-- DOCS BODY :: NEEDS CONSIDERABLE HELP -->
-		<div id="docs" class="body" data-spy="scroll" data-target=".navspy" style="background:rgba(0, 0, 0, 0.95) !important;font-size: 16px;color:#8597A4;font-family:montserrat;">
+		<div id="docs" class="body hidden" data-spy="scroll" data-target=".navspy" style="background:rgba(0, 0, 0, 0.95) !important;font-size: 16px;color:#8597A4;font-family:montserrat;">
 			<link rel="stylesheet" type="text/css" href="http://pwnhs.org/css/prism.css" scoped>
 			<link rel='stylesheet' href='http://pwnhs.org/css/linecons.min.css'/>
 			<link rel='stylesheet' href='http://pwnhs.org/css/ionicons.min.css'/>
@@ -490,9 +489,9 @@
 			$('#status-trigger').on('touchend', function() {
 				$('#status').removeClass('hidden');
 			});
-			$('#docs-trigger').on('touchend', function() {
+			$('#docs-trigger').on('click', function() {
 				$('#docs').removeClass('hidden');
-				$('body').css('background', 'background:rgba(0,0,0,0.95)');
+				$('body').css('background', 'rgba(0,0,0,0.95)');
 			});
 			$('#contact-trigger').on('touchend', function() {
 				$('#contact').removeClass('hidden');

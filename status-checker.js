@@ -12,7 +12,7 @@ var input = document.getElementById('student');
 var studID = "";
 var intID = 0;
 
-var meetings = document.getElementById('meetings');
+var meetings = document.getElementById('meetingsA');
 var meetingsMark = document.getElementById('meetingsMark');
 var goodStatus = document.getElementById('goodStatus');
 var goodStatusMark = document.getElementById('goodStatusMark');
