@@ -534,7 +534,7 @@
     </div>
 
 <!-- OFFICER BODY -->
-		<div id="officer" class="body hidden" style="background:rgba(0,0,0,0.95);">
+		<div id="officer" class="body" style="background:rgba(0,0,0,0.95);">
 			<div id="centerDisplay" style="text-align: center;text-align: -webkit-center;">
 				<div id="officer-handler">
 					<a class="prob8" style="font-size:30px;cursor:pointer;">Officer <i class="fa fa-sign-in"></i></a>
@@ -636,6 +636,9 @@
 
 	<!-- no text selection -->
 		<script>
+		// prevent functionality of context menu,
+		// i.e. text-selection
+
 			document.addEventListener('gesturestart', function (e) {
 				e.preventDefault();
 			});
