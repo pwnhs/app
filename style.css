@@ -218,9 +218,9 @@ body {
 .scroll > *, .scroll-y > *, .scroll-x > * {
     -webkit-transform : translateZ(0);
 }
-.scroll { overflow: auto; }
-.scroll-y { overflow-y: auto; }
-.scroll-x { overflow-x: auto; }
+.scroll { overflow: scroll; }
+.scroll-y { overflow-y: scroll; }
+.scroll-x { overflow-x: scroll; }
 
 /* Headers */
 
