@@ -1227,3 +1227,99 @@ pre.git {
 	text-align: center;
 	margin: 0px;
 }
+
+/** BUBBLES **/
+#container {
+	height: 270px;
+	padding: 0px;
+	width: 248px;
+	left: 48%;
+	top: 53%;
+}
+
+#container div {
+	position: absolute;
+}
+
+#beaker {
+	height: 200px;
+	width: 200px;
+}
+
+#liquid {
+	height: 170px;
+	width: 180px;
+}
+
+#liquid .bubble {
+	-webkit-animation-name: bubble;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+	left: 0%;
+	height: 20px;
+	width: 20px;
+}
+
+@-webkit-keyframes bubble {
+	0% {
+		bottom: 0;
+	}
+	50% {
+		background-color: palevioletred;
+		bottom: 80px;
+	}
+	100% {
+		background-color: rgba(255, 255, 255, 0);
+		bottom: 160px;
+	}
+}
+.bubble:nth-child(1) {
+	left: 162px;
+	-webkit-animation-delay: 7.73265ms;
+	-webkit-animation-duration: 400ms;
+	-webkit-transform: scale(0.5);
+}
+
+.bubble:nth-child(2) {
+	left: 123px;
+	-webkit-animation-delay: 22.21033ms;
+	-webkit-animation-duration: 500ms;
+	-webkit-transform: scale(1.3);
+}
+
+.bubble:nth-child(3) {
+	left: 86px;
+	-webkit-animation-delay: 26.4781ms;
+	-webkit-animation-duration: 800ms;
+	-webkit-transform: scale(1.1);
+}
+
+.bubble:nth-child(4) {
+	left: 153px;
+	-webkit-animation-delay: 29.13915ms;
+	-webkit-animation-duration: 400ms;
+	-webkit-transform: scale(0.8);
+}
+
+.bubble:nth-child(5) {
+	left: 12px;
+	-webkit-animation-delay: 26.07127ms;
+	-webkit-animation-duration: 400ms;
+	-webkit-transform: scale(0.4);
+}
+
+.bubble:nth-child(6) {
+	left: 45px;
+	-webkit-animation-delay: 11.00826ms;
+	-webkit-animation-duration: 900ms;
+	-webkit-transform: scale(0.6);
+}
+
+.bubble:nth-child(7) {
+	left: 3px;
+	-webkit-animation-delay: 7.71599ms;
+	-webkit-animation-duration: 1100ms;
+	-webkit-transform: scale(0.7);
+}
