@@ -81,47 +81,6 @@
 	<body>
 
 <!-- HOME BODY -->
-		<div id="home" class="body">
-    		<script src="https://two.js.org/third-party/url.js"></script>
-    		<script src="https://two.js.org/third-party/two.js"></script>
-			<style>
-      			.assets { display: none; }
-			</style>
-			<div class="assets">
-			  <!-- letter "C" made in Adobe Illustrator CS5 -->
-			  <svg version="1.1"
-				 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-				 x="0px" y="0px" width="202px" height="264px" viewBox="-0.469 -0.136 202 264"
-				 overflow="visible" enable-background="new -0.469 -0.136 202 264" xml:space="preserve">
-			  <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="m199.5,154.792007c0,0 -35.703003,58.340988 -99.987999,58.340988c-64.289001,-0.001007 18.987999,-55.270996 18.987999,-134.60199c0,-79.327015 -141.916,84.968994 -80,84.968994c61.924004,0 146.354004,-161.296001 146.354004,-161.296001"/>
-			  </svg>
-			</div>
-			<div class="scripts">
-			  <script src="./svg.js"></script>
-			</div>
-			<div id="title">
-				<span class="pw">PW</span><span class="nhsf">NHS</span>
-				<br>
-				<i id="pwnhs-date" style="font-family:Raleway;font-size:3vw;"></i>
-			</div>
-			<div id="home-content">
-				<div id="home-rest">
-					<span style="font-family:Raleway;font-size:4vw;"><span id="read"></span> Some reminders:</span>
-					<br>
-					<br>
-					<div style="font-size:3.8vw;margin-bottom:5px;">Your hours are due on December 1, <span id="hoursDue"></span> from now.</div>
-					<div style="font-size:3.8vw;margin-bottom:5px;">Only went to one meeting? Add <span id="penHoursAdd">two</span> penalty hours.</div>
-					<div style="font-size:3.8vw;margin-bottom:7.5px;">Incurred penalty hours are due next semester.</div>
-					<br>
-					<br>
-					<emoji id="smile" style="font-size:5vh;"></emoji>
-					<br>
-					<br>
-					<div style="font-size:3.5vw"><i>Have <span id="aan"></span> </i><span id="word"></span><i> day.</i></div>
-				</div>
-			</div>
-			<script src="homeScript.js"></script>
-		</div>
 
 <!-- STATUS BODY -->
 		<div id="status" class="body hidden">
@@ -146,7 +105,7 @@
 		</div>
 
 <!-- DOCS BODY -->
-		<div id="docs" class="body hidden" data-spy="scroll" data-target=".navspy" style="background:rgba(0, 0, 0, 0.95) !important;font-size: 16px;color:#8597A4;font-family:montserrat;">
+		<div id="docs" class="body hidden" data-spy="scroll" data-target=".navspy" style="background:rgba(0, 0, 0, 0.95) !important;font-size: 16px;color:#8597A4;font-family:montserrat;display:relative;z-index:100;">
 			<link rel="stylesheet" type="text/css" href="http://pwnhs.org/css/prism.css" scoped>
 			<link rel='stylesheet' href='http://pwnhs.org/css/linecons.min.css'/>
 			<link rel='stylesheet' href='http://pwnhs.org/css/ionicons.min.css'/>
@@ -747,7 +706,7 @@
 	<!-- navbar functionality -->
 		<script>
 			$('.navbar-child').each(function() {
-				$(this).on('touchend', function() {
+				$(this).on('click', function() {
 					if ($(this).hasClass('active')) {
 						$('html, body').animate({ scrollTop: 0 }, 'medium');
 					}
@@ -757,20 +716,20 @@
 					$('body').css('background', '');
 				})
 			});
-			$('#home-trigger').on('touchend', function() {
+			$('#home-trigger').on('click', function() {
 				$('#home').removeClass('hidden');
 			});
-			$('#status-trigger').on('touchend', function() {
+			$('#status-trigger').on('click', function() {
 				$('#status').removeClass('hidden');
 			});
-			$('#docs-trigger').on('touchend', function() {
+			$('#docs-trigger').on('click', function() {
 				$('#docs').removeClass('hidden');
 				$('body').css('background', 'rgba(0,0,0,0.95)');
 			});
-			$('#contact-trigger').on('touchend', function() {
+			$('#contact-trigger').on('click', function() {
 				$('#contact').removeClass('hidden');
 			});
-			$('#officer-trigger').on('touchend', function() {
+			$('#officer-trigger').on('click', function() {
 				$('#officer').removeClass('hidden');
 			});
 		</script>
