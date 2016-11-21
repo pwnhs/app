@@ -55,8 +55,8 @@ var word = words[Math.floor(Math.random()*words.length)]
 $('#word').text(word);
 var aan = word.charAt(0);
 if (aan == 'a' || aan == 'e' || aan == 'i' || aan == 'o' || aan == 'u'){
-	aan = 'an';
+	aan = 'an ';
 } else {
-	aan = 'a';
+	aan = 'a ';
 }
 $('#aan').text(aan);
