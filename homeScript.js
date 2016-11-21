@@ -24,7 +24,7 @@ if (hour < 4) {
 $('#read').text(greeting)
 $('#read').css('color', rColor2);
 
-if (hour < 5 || hour > 16) {
+if (hour < 5 || hour > 17) {
 	$('#darkMode').attr('href', './darkmode.css');
 	$('#statusBar').attr('content', 'black');
 } else {
