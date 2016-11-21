@@ -752,13 +752,13 @@
 						$('html, body').animate({ scrollTop: 0 }, 'medium');
 					}
 					$('.navbar-child').removeClass('active');
-					$('div.body').addClass('hidden');
+					$('div.body, canvas, svg').addClass('hidden');
 					$(this).addClass('active');
 					$('body').css('background', '');
 				})
 			});
 			$('#home-trigger').on('touchend', function() {
-				$('#home').removeClass('hidden');
+				$('#home, canvas, svg').removeClass('hidden');
 			});
 			$('#status-trigger').on('touchend', function() {
 				$('#status').removeClass('hidden');
