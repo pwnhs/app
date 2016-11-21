@@ -1344,3 +1344,13 @@ pre.git {
 	text-align: center;
 	text-align: -webkit-center;
 }
+.app{
+    margin-bottom: 2px;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    display: inline-block;
+    background-size: cover;
+    background-image: url(http://pwnhs.org/appResources/icons/logo.png);
+}
