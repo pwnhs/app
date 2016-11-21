@@ -1343,6 +1343,7 @@ pre.git {
 	position: absolute;
 	top: 15%;
 	left : 15%;
+	z-index: 10;
 }
 #title > span {
 	font-size: 4vw !important;
@@ -1350,6 +1351,7 @@ pre.git {
 #home-content {
 	position: relative;
 	width: 100%;
+	z-index: 10;
 }
 #home-rest {
 	text-align: center;
