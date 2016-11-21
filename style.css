@@ -243,10 +243,10 @@ a{
     transition: all .3s ease-in-out;
 }
 a:hover{
-    color:#FFF;text-decoration: none;
+    color:black;text-decoration: none;
 }
 .active a{
-    color:#FFF;
+    color:black;
 }
 p a{
     color:#FFF;
