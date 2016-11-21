@@ -1368,6 +1368,9 @@ pre.git {
 #idName {
 	color:rgba(0,0,0,0.75);
 }
+#prenav {
+	background-color: whitesmoke !important;
+}
 .breao {
 	text-align: center;
 }
