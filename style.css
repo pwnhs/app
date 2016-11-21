@@ -543,6 +543,17 @@ code.git {
     font-family: Monaco, "DejaVu Sans Mono", "Courier New", monospace;
     font-size: 13px;
     color: #666;
+    padding: 0 5px 0px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-clip: padding-box;
+    background-color: white;
+}
+b.git {
+    font-size: 13px;
+    color: #666;
     padding: 0 5px 1px;
     border: 1px solid #ddd;
     -webkit-border-radius: 3px;
@@ -1344,13 +1355,39 @@ pre.git {
 	text-align: center;
 	text-align: -webkit-center;
 }
+#download{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width:100%;
+}
+.breao {
+	text-align: center;
+}
 .app{
+	position:relative;
+    left: 50%;
+    -webkit-transform: translate(-50%, -0%);
+    transform: translate(-50%, -0%);
     margin-bottom: 2px;
     vertical-align: middle;
-    width: 1em;
-    height: 1em;
-    line-height: 1em;
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    max-height: 100%;
     display: inline-block;
     background-size: cover;
-    background-image: url(http://pwnhs.org/appResources/icons/logo.png);
+    background-image: url(http://pwnhs.org/appResources/icons/logo_turq.png);
+}
+span.ath{
+    width:1.2em;
+    height:1.2em;
+    line-height:1.2em;
+    display: inline-block;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(http://cdn.ayazhafiz.com/coit-resources/img/ios8share.png)
 }
