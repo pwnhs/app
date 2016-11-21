@@ -25,10 +25,20 @@ $('#read').text(greeting)
 $('#read').css('color', rColor2);
 
 function dateDiff(date) {
-	var second=1000, minute=second*60, hour=minute*60, day=hour*24, week=day*7;
 	date = new Date(date);
-	var timediff = date - today;
-	return Math.floor(timediff / day) + 2;
+	
+    // The number of milliseconds in one day
+    var ONE_DAY = 1000 * 60 * 60 * 24
+
+    // Convert both dates to milliseconds
+    var date1_ms = today.getTime()
+    var date2_ms = date.getTime()
+
+    // Calculate the difference in milliseconds
+    var difference_ms = Math.abs(date1_ms - date2_ms)
+
+    // Convert back to days and return
+    return Math.floor(difference_ms/ONE_DAY) + 1
 }
 
 $('#hoursDue').text(dateDiff('2016-12-01') + ' days');
