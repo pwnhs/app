@@ -1,9 +1,9 @@
 body {
-	background: rgba(0, 0, 0, 0.99);
+	background: rgba(0, 0, 0, 0.99) !important;
 }
 span.pw {
     color: #a0a0a0;
 }
-#status {
+#status, #status > span, #status > input {
 	color: #8597A4 !important;
 }
