@@ -1,3 +1,20 @@
+var smileList = [
+	"closed-smile",
+	"cool",
+	"full-grin",
+	"halo",
+	"grin",
+	"hugging-smile",
+	"nerd",
+	"open-grin",
+	"relieved",
+	"s-smile",
+	"squint-grin",
+	"squint-smile",
+	"u-down"
+];
+$('#smile').text(smileList[Math.floor(Math.random()*smileList.length)]);
+
 var emojiList = [
 	"rocket",
 	"nerd",

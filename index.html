@@ -58,6 +58,12 @@
 					location.reload();
 				});
 			});
+
+		  	var mainColor = ["palegoldenrod", "burlywood", "paleturquoise", "#e6db74", "#1ed5c8"];
+			var rColor = mainColor[Math.floor(Math.random()*mainColor.length)];
+
+		  	var secColor = ["palevioletred", "#18a8de", "#5d69b1", "#a48588", "#ff9ca8"];
+			var rColor2 = secColor[Math.floor(Math.random()*secColor.length)];
 		</script>
 
 		<!-- Google Analytics -->
@@ -74,29 +80,130 @@
 	</head>
 	<body>
 
+<!-- HOME BODY -->
+		<div id="home" class="body">
+    		<script src="https://two.js.org/third-party/url.js"></script>
+    		<script src="https://two.js.org/third-party/two.js"></script>
+			<style>
+      			.assets { display: none; }
+			</style>
+			<div class="assets">
+			  <!-- letter "C" made in Adobe Illustrator CS5 -->
+			  <svg version="1.1"
+				 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+				 x="0px" y="0px" width="202px" height="264px" viewBox="-0.469 -0.136 202 264"
+				 overflow="visible" enable-background="new -0.469 -0.136 202 264" xml:space="preserve">
+			  <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="m199.5,154.792007c0,0 -35.703003,58.340988 -99.987999,58.340988c-64.289001,-0.001007 18.987999,-55.270996 18.987999,-134.60199c0,-79.327015 -141.916,84.968994 -80,84.968994c61.924004,0 146.354004,-161.296001 146.354004,-161.296001"/>
+			  </svg>
+			</div>
+			<div class="scripts">
+			  <script src="./svg.js"></script>
+			</div>
+			<div id="title">
+				<span class="pw">PW</span><span class="nhsf">NHS</span>
+				<br>
+				<i id="pwnhs-date" style="font-family:Raleway;font-size:3vw;"></i>
+			</div>
+			<div id="home-content">
+				<div id="home-rest">
+					<span style="font-family:Raleway;font-size:4vw;"><span id="read"></span> Some reminders:</span>
+					<br>
+					<br>
+					<div style="font-size:3.8vw;margin-bottom:5px;">Your hours are due on December 1, <span id="hoursDue"></span> from now.</div>
+					<div style="font-size:3.8vw;margin-bottom:5px;">Only went to one meeting? Add <span id="penHoursAdd">two</span> penalty hours.</div>
+					<div style="font-size:3.8vw;margin-bottom:7.5px;">Incurred penalty hours are due next semester.</div>
+					<br>
+					<br>
+					<emoji id="smile" style="font-size:5vh;"></emoji>
+					<br>
+					<br>
+					<div style="font-size:3.5vw"><i>Have <span id="aan"></span> </i><span id="word"></span><i> day.</i></div>
+				</div>
+			</div>
+			<script>
+				var topOff = $(window).height()/8 + 240;
+				$('#home-content').css('top', topOff + 'px');
+
+				var today = new Date(),
+					hour = today.getHours(),
+					week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+					day = week[today.getDay()],
+					nday = today.getDate(),
+					months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+					month = months[today.getMonth()];
+				$('#pwnhs-date').text(day + ', ' + nday + ' ' + month);
+
+				var greeting = 'Good '
+				if (hour < 4) {
+					greeting += 'Night.'
+				} else if (hour < 11) {
+					greeting += 'Morning.'
+				} else if (hour < 18) {
+					greeting += 'Afternoon.'
+				} else {
+					greeting += 'Evening.'
+				}
+				$('#read').text(greeting)
+				$('#read').css('color', rColor2);
+
+				function dateDiff(date) {
+					var second=1000, minute=second*60, hour=minute*60, day=hour*24, week=day*7;
+					date = new Date(date);
+					var timediff = date - today;
+					return Math.floor(timediff / day) + 2;
+				}
+
+				$('#hoursDue').text(dateDiff('2016-12-01') + ' days');
+				$('#hoursDue, #penHoursAdd, #word').css('color', rColor);
+
+				var words = [
+					'fantastic',
+					'wonderful',
+					'excellent',
+					'tremendous',
+					'enjoyable',
+					'dynamite',
+					'stupendous',
+					'wondrous',
+					'sensational',
+					'outstanding',
+					'incredible',
+					'sublime',
+					'wicked',
+					'swell',
+					'terrific'
+				];
+				var word = words[Math.floor(Math.random()*words.length)]
+				$('#word').text(word);
+				var aan = word.charAt(0);
+				if (aan == 'a' || aan == 'e' || aan == 'i' || aan == 'o' || aan == 'u'){
+					aan = 'an';
+				} else {
+					aan = 'a';
+				}
+				$('#aan').text(aan);
+			</script>
+		</div>
+
 <!-- STATUS BODY -->
 		<div id="status" class="body hidden">
-			<div style="background:#efefef;">
-				<div class="center">
-					<h2>
-						<pre class="git" style="font-size:18px;color:#fd971f;border-color:#fd971f !important;vertical-align:top;height:22px;"><span style="height:22px;padding-right:5px;vertical-align:middle;padding-bottom:20px;">YOUR STATUS</span><emoji id="set" style="position:absolute;line-height:40px;vertical-align:bottom;"></emoji>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
-					</h2>
-						<br>
-						<br>
-					<span style="color:rgba(0,0,0,0.75);font-size:40px;">Type in your ID:</span>
-						<br>
-						<br>
-					<input id="student" spellcheck="false" autocomplete="off" tabindex="1" onkeypress="return isNumber(event);" maxlength="6" style="background:none;border:none;font-size:45px;text-align:center;border-bottom: 2px solid black;border-radius:0;text-decoration:none;width: 200px;cursor:crosshair">
-						<br>
-						<br>
-					<p id="meetingsA" class="hidden">2 Meetings? <i id="meetingsMark" class="fa"></i></p>
-					<p id="goodStatus" class="hidden">No penalty hours? <i id="goodStatusMark" class="fa"></i></p>
-					<span id="sad" class="hidden" style="color:rgba(252,13,27,0.5);">See an officer for your penalty hours.</span>
+			<div class="center">
+				<h2>
+					<pre class="git" style="font-size:18px;color:#fd971f;border-color:#fd971f !important;vertical-align:top;height:22px;"><span style="height:22px;padding-right:5px;vertical-align:middle;padding-bottom:20px;">YOUR STATUS</span><emoji id="set" style="position:absolute;line-height:40px;vertical-align:bottom;"></emoji>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
+				</h2>
+					<br>
+					<br>
+				<span style="color:rgba(0,0,0,0.75);font-size:40px;">Type in your ID:</span>
+					<br>
+					<br>
+				<input id="student" spellcheck="false" autocomplete="off" tabindex="1" onkeypress="return isNumber(event);" maxlength="6" style="background:none;border:none;font-size:45px;text-align:center;border-bottom: 2px solid black;border-radius:0;text-decoration:none;width: 200px;cursor:crosshair">
+					<br>
+					<br>
+				<p id="meetingsA" class="hidden">2 Meetings? <i id="meetingsMark" class="fa"></i></p>
+				<p id="goodStatus" class="hidden">No penalty hours? <i id="goodStatusMark" class="fa"></i></p>
+				<span id="sad" class="hidden" style="color:rgba(252,13,27,0.5);">See an officer for your penalty hours.</span>
 
-					<script src="./status-emojis.js"></script>
-					<script src="http://cdn.ayazhafiz.com/js/emojicons.min.js"></script>
-					<script src="./status-checker.js"></script>
-				</div>
+				<script src="./status-checker.js"></script>
 			</div>
 		</div>
 
@@ -629,6 +736,10 @@
 		--></div>
 
 <!-- SCRIPTS -->
+
+	<!-- emojis -->
+		<script src="./emojis.js"></script>
+		<script src="http://cdn.ayazhafiz.com/js/emojicons.min.js"></script>
 
 	<!-- set version height -->
 		<script>

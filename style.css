@@ -1220,14 +1220,6 @@ pre.git {
 	margin-top:80px;
 }
 
-#version {
-	position: fixed;
-	right: 0;
-	left: 0;
-	text-align: center;
-	margin: 0px;
-}
-
 /** BUBBLES **/
 #container {
 	height: 270px;
@@ -1327,4 +1319,28 @@ pre.git {
 	-webkit-animation-duration: 1100ms;
 	-webkit-transform: scale(0.7);
 	background-color: #1ed5c8;
+}
+
+#version {
+	position: fixed;
+	right: 0;
+	left: 0;
+	text-align: center;
+	margin: 0px;
+}
+#title {
+	position: absolute;
+	top: 15%;
+	left : 15%;
+}
+#title > span {
+	font-size: 4vw !important;
+}
+#home-content {
+	position: relative;
+	width: 100%;
+}
+#home-rest {
+	text-align: center;
+	text-align: -webkit-center;
 }
