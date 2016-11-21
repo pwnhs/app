@@ -24,9 +24,11 @@ if (hour < 4) {
 $('#read').text(greeting)
 $('#read').css('color', rColor2);
 
-if (hour > 4 && hour < 17) {
+if (hour < 5 || hour > 16) {
 	$('#darkMode').attr('href', './darkmode.css');
 	$('#statusBar').attr('content', 'black');
+} else {
+	$('#statusBar').attr('content', 'default');
 }
 
 function dateDiff(date) {
