@@ -1,5 +1,6 @@
 <html>
 	<head>
+		
 		<!-- meta -->
 		<title>PWNHS</title>
 
@@ -83,7 +84,7 @@
 		<div id="app">
 
 <!-- HOME BODY -->
-		<div id="home" class="body">
+			<div id="home" class="body">
     		<script src="https://two.js.org/third-party/url.js"></script>
     		<script src="https://two.js.org/third-party/two.js"></script>
 			<style>
@@ -126,7 +127,7 @@
 		</div>
 
 <!-- STATUS BODY -->
-		<div id="status" class="body hidden">
+			<div id="status" class="body hidden">
 			<div class="center" style="font-family:Raleway !important">
 				<h2>
 					<pre class="git" style="font-size:18px;color:#fd971f;border-color:#fd971f !important;vertical-align:top;height:22px;"><span style="height:22px;padding-right:5px;vertical-align:middle;padding-bottom:20px;">YOUR STATUS</span><emoji id="set" style="position:absolute;line-height:40px;vertical-align:bottom;"></emoji>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>
@@ -148,7 +149,7 @@
 		</div>
 
 <!-- DOCS BODY -->
-		<div id="docs" class="body hidden" data-spy="scroll" data-target=".navspy" style="font-size: 16px;color:#8597A4;font-family:montserrat;">
+			<div id="docs" class="body hidden" data-spy="scroll" data-target=".navspy" style="font-size: 16px;color:#8597A4;font-family:montserrat;">
 			<link rel="stylesheet" type="text/css" href="http://pwnhs.org/css/prism.css" scoped>
 			<link rel='stylesheet' href='http://pwnhs.org/css/linecons.min.css'/>
 			<link rel='stylesheet' href='http://pwnhs.org/css/ionicons.min.css'/>
@@ -512,7 +513,7 @@
 		</div>
 
 <!-- CONTACT BODY -->
-		<div id="contact" class="body hidden" style="margin-bottom:40px;">
+			<div id="contact" class="body hidden" style="margin-bottom:40px;">
 
         <!-- Main container -->
         <div class="page-container">
@@ -602,7 +603,7 @@
     </div>
 
 <!-- OFFICER BODY -->
-		<div id="officer" class="body hidden" style="background:rgba(0,0,0,0.95);">
+			<div id="officer" class="body hidden" style="background:rgba(0,0,0,0.95);">
 			<div id="centerDisplay" style="text-align: center;text-align: -webkit-center;z-index:10">
 				<br>
 				<br>
@@ -629,7 +630,7 @@
 					</div>
 				</div>
 			</div>
-			<code id="version" style="font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color:palevioletred;z-index:15;"><code class="git" style="color:maroon">v2.2.0</code></code>
+			<code id="version" style="font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color:palevioletred;z-index:15;"><code class="git" style="color:maroon">v2.2.1</code></code>
 			<div id="container" style="margin-top:0;z-index:0;position:fixed;">
 				<div id="beaker">
 					<div id="liquid">
@@ -644,10 +645,10 @@
 				</div>
 			</div>
 		</div>
-		<script src="./officer-checker.js"></script>
+			<script src="./officer-checker.js"></script>
 
 <!-- NAVBAR -->
-		<div id="bottom-navbar" class="navbar" style="z-index:999"><!--
+			<div id="bottom-navbar" class="navbar" style="z-index:999"><!--
 			--><div id="home-trigger" class="navbar-child active"><!--
 					--><i class="fa fa-home"></i><!--
 				--><br><!--
@@ -678,107 +679,108 @@
 <!-- SCRIPTS -->
 
 	<!-- emojis -->
-		<script src="./emojis.js"></script>
-		<script src="http://cdn.ayazhafiz.com/js/emojicons.min.js"></script>
+			<script src="./emojis.js"></script>
+			<script src="http://cdn.ayazhafiz.com/js/emojicons.min.js"></script>
 
 	<!-- set version height -->
-		<script>
-			var bottomHeight = 1.75 * $('#bottom-navbar').height();
-			$('#version').css('bottom', bottomHeight);
-		</script>
+			<script>
+				var bottomHeight = 1.75 * $('#bottom-navbar').height();
+				$('#version').css('bottom', bottomHeight);
+			</script>
 
 	<!-- no double tap -->
-		<script>
-			// jQuery no-double-tap-zoom plugin
+			<script>
+				// jQuery no-double-tap-zoom plugin
 
-			// Triple-licensed: Public Domain, MIT and WTFPL license - share and enjoy!
-			/*
-			var notSwiped = true;
-			$(function() {
-				$('body')
-					.on('mousedown touchstart', function (e) {
-						console.log("(x,y) = (" + e.pageX + "," + e.pageY +")");
-						xDown = e.pageX;
-						yDown = e.pageY;
-					})
-					.on('mouseup touchend',function (e) {
-						console.log("(x,y) = (" + e.pageX + "," + e.pageY +")");
-						xUp = e.pageX;
-						yUp = e.pageY;
-						if (xDown != xUp || yDown != yUp) {
-							notSwiped = false;
-						}
-					})
-				;
-			})(jQuery);
-			*/
+				// Triple-licensed: Public Domain, MIT and WTFPL license - share and enjoy!
+				/*
+				var notSwiped = true;
+				$(function() {
+					$('body')
+						.on('mousedown touchstart', function (e) {
+							console.log("(x,y) = (" + e.pageX + "," + e.pageY +")");
+							xDown = e.pageX;
+							yDown = e.pageY;
+						})
+						.on('mouseup touchend',function (e) {
+							console.log("(x,y) = (" + e.pageX + "," + e.pageY +")");
+							xUp = e.pageX;
+							yUp = e.pageY;
+							if (xDown != xUp || yDown != yUp) {
+								notSwiped = false;
+							}
+						})
+					;
+				})(jQuery);
+				*/
 
-			(function($) {
-			  var IS_IOS = /iphone|ipad/i.test(navigator.userAgent);
-			  $.fn.nodoubletapzoom = function() {
-				if (IS_IOS) {
-				  $(this).bind('touchstart', function preventZoom(e) {
-					var t2 = e.timeStamp
-					  , t1 = $(this).data('lastTouch') || t2
-					  , dt = t2 - t1
-					  , fingers = e.originalEvent.touches.length;
-					$(this).data('lastTouch', t2);
-					if (!dt || dt > 500 || fingers > 1) return; // not double-tap
+				(function($) {
+				  var IS_IOS = /iphone|ipad/i.test(navigator.userAgent);
+				  $.fn.nodoubletapzoom = function() {
+					if (IS_IOS) {
+					  $(this).bind('touchstart', function preventZoom(e) {
+						var t2 = e.timeStamp
+						  , t1 = $(this).data('lastTouch') || t2
+						  , dt = t2 - t1
+						  , fingers = e.originalEvent.touches.length;
+						$(this).data('lastTouch', t2);
+						if (!dt || dt > 500 || fingers > 1) return; // not double-tap
 
-					e.preventDefault(); // double tap - prevent the zoom
-					// also synthesize click events we just swallowed up
-					$(this).trigger('click').trigger('click');
-				  });
-				}
-			  };
-			})(jQuery);
+						e.preventDefault(); // double tap - prevent the zoom
+						// also synthesize click events we just swallowed up
+						$(this).trigger('click').trigger('click');
+					  });
+					}
+				  };
+				})(jQuery);
 
-			$('body').nodoubletapzoom();
-		</script>
+				$('body').nodoubletapzoom();
+			</script>
 
 	<!-- no text selection -->
-		<script>
-		// prevent functionality of context menu,
-		// i.e. text-selection
+			<script>
+			// prevent functionality of context menu,
+			// i.e. text-selection
 
-			document.addEventListener('gesturestart', function (e) {
-				e.preventDefault();
-			});
-		</script>
+				document.addEventListener('gesturestart', function (e) {
+					e.preventDefault();
+				});
+			</script>
 
 	<!-- navbar functionality -->
-		<script>
-			$('.navbar-child').each(function() {
-				$(this).on('touchend', function() {
-					if ($(this).hasClass('active')) {
-						$('html, body').animate({ scrollTop: 0 }, 'medium');
-					}
-					$('.navbar-child').removeClass('active');
-					$('div.body').addClass('hidden');
-					$(this).addClass('active');
-					$('body').attr('style', '');
-				})
-			});
-			$('#home-trigger').on('touchend', function() {
-				$('#home').removeClass('hidden');
-				$('body').attr('style', 'overflow: hidden; margin: 0px; padding: 0px; top: 0px; left: 0px; right: 0px; bottom: 0px; position: fixed;')
-			});
-			$('#status-trigger').on('touchend', function() {
-				$('#status').removeClass('hidden');
-			});
-			$('#docs-trigger').on('touchend', function() {
-				$('#docs').removeClass('hidden');
-			});
-			$('#contact-trigger').on('touchend', function() {
-				$('#contact').removeClass('hidden');
-			});
-			$('#officer-trigger').on('touchend', function() {
-				$('#officer').removeClass('hidden');
-			});
-		</script>
+			<script>
+				$('.navbar-child').each(function() {
+					$(this).on('touchend', function() {
+						if ($(this).hasClass('active')) {
+							$('html, body').animate({ scrollTop: 0 }, 'medium');
+						}
+						$('.navbar-child').removeClass('active');
+						$('div.body').addClass('hidden');
+						$(this).addClass('active');
+						$('body').attr('style', '');
+					})
+				});
+				$('#home-trigger').on('touchend', function() {
+					$('#home').removeClass('hidden');
+					$('body').attr('style', 'overflow: hidden; margin: 0px; padding: 0px; top: 0px; left: 0px; right: 0px; bottom: 0px; position: fixed;')
+				});
+				$('#status-trigger').on('touchend', function() {
+					$('#status').removeClass('hidden');
+				});
+				$('#docs-trigger').on('touchend', function() {
+					$('#docs').removeClass('hidden');
+				});
+				$('#contact-trigger').on('touchend', function() {
+					$('#contact').removeClass('hidden');
+				});
+				$('#officer-trigger').on('touchend', function() {
+					$('#officer').removeClass('hidden');
+				});
+			</script>
 
 <!-- END CONTENT -->
 		</div>
+		
 	</body>
 
 <!-- END PAGE -->
