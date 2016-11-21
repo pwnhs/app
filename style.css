@@ -1357,7 +1357,7 @@ pre.git {
 	text-align: center;
 	text-align: -webkit-center;
 }
-#download{
+#download {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1365,10 +1365,13 @@ pre.git {
     transform: translate(-50%, -50%);
     width:100%;
 }
+#idName {
+	color:rgba(0,0,0,0.75);
+}
 .breao {
 	text-align: center;
 }
-.app{
+.app {
 	position:relative;
     left: 50%;
     -webkit-transform: translate(-50%, -0%);
@@ -1383,7 +1386,7 @@ pre.git {
     background-size: cover;
     background-image: url(http://pwnhs.org/appResources/icons/logo_turq.png);
 }
-span.ath{
+span.ath {
     width:1.2em;
     height:1.2em;
     line-height:1.2em;

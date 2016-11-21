@@ -4,6 +4,6 @@ body {
 span.pw {
     color: #a0a0a0;
 }
-#status, #status > span, #status > input {
+#status, #idName, #student {
 	color: #8597A4 !important;
 }
