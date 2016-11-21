@@ -34,3 +34,8 @@ a:hover{
 .bgc-white{
 	background-color: rgba(0, 0, 0, 0.95);
 }
+.twtr .icon-lg, .fbook .icon-lg, .rmnd .icon-lg, .gith .icon-lg, .mail1 .icon-lg, .mail2 .icon-lg, .mail3 .icon-lg, .mail4 .icon-lg{
+    -webkit-transition: color .3s ease-in-out;
+    transition: color .3s ease-in-out;
+	color:rgba(255, 255, 255, 0.6);
+}
