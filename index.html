@@ -135,7 +135,7 @@
 		</div>
 
 <!-- DOCS BODY -->
-		<div id="docs" class="body hidden" data-spy="scroll" data-target=".navspy" style="font-size: 16px;color:#8597A4;font-family:montserrat;">
+		<div id="docs" class="body hidden" data-spy="scroll" data-target=".navspy" style="background:rgba(0, 0, 0, 0.95) !important;font-size: 16px;color:#8597A4;font-family:montserrat;">
 			<link rel="stylesheet" type="text/css" href="http://pwnhs.org/css/prism.css" scoped>
 			<link rel='stylesheet' href='http://pwnhs.org/css/linecons.min.css'/>
 			<link rel='stylesheet' href='http://pwnhs.org/css/ionicons.min.css'/>
@@ -143,7 +143,7 @@
 
 			<!-- Main container -->
 
-				<pre id="prenav" class="veeee navbar-fixed full-width-unit language-" style="margin-top:0; padding-left:3%; border-top-left-radius:0;border-top-right-radius:0;border:0;"><code class="navtrack"><span><a class="side" href="//pwnhs.org" style="color:#035299;"><span class="ion ion-arrow-left-c icon-spacer"></span> BACK TO PWNHS</a></span>   <span><a href="#intro">INTRO</a></span>   <span><a href="#general">GENERAL</a></span>   <span><a href="#volhours">HOURS</a></span>   <span><a href="#approrg">APPROVED ORGANISATIONS</a></span>   <span><a href="#penhours">PENALTY HOURS</a></span>   <span><a href="#meetings">MEETINGS</a></span>   <span><a href="#obligations">MEMBER OBLIGATIONS</a></span>   <span><a href="#four-pillars">FOUR PILLARS</a></span>   <span><a href="#bylaws">BY-LAWS</a></span>   <span><a class="side" href="#faq" style="color:rgb(164,146,133);padding-top:5px;padding-bottom:5px;font-size:14px;">FAQ</a></span></code></pre>
+				<pre id="prenav" class="veeee navbar-fixed full-width-unit language-" style="background:rgba(0,0,0,0.95);margin-top:0; padding-left:3%; border-top-left-radius:0;border-top-right-radius:0;border:0;"><code class="navtrack"><span><a class="side" href="//pwnhs.org" style="color:#035299;"><span class="ion ion-arrow-left-c icon-spacer"></span> BACK TO PWNHS</a></span>   <span><a href="#intro">INTRO</a></span>   <span><a href="#general">GENERAL</a></span>   <span><a href="#volhours">HOURS</a></span>   <span><a href="#approrg">APPROVED ORGANISATIONS</a></span>   <span><a href="#penhours">PENALTY HOURS</a></span>   <span><a href="#meetings">MEETINGS</a></span>   <span><a href="#obligations">MEMBER OBLIGATIONS</a></span>   <span><a href="#four-pillars">FOUR PILLARS</a></span>   <span><a href="#bylaws">BY-LAWS</a></span>   <span><a class="side" href="#faq" style="color:rgb(164,146,133);padding-top:5px;padding-bottom:5px;font-size:14px;">FAQ</a></span></code></pre>
 
 			<div id="mainContainer" class="container">
 				 <div class="row">
@@ -755,6 +755,7 @@
 			});
 			$('#docs-trigger').on('touchend', function() {
 				$('#docs').removeClass('hidden');
+				$('body').css('background', 'rgba(0,0,0,0.95)');
 			});
 			$('#contact-trigger').on('touchend', function() {
 				$('#contact').removeClass('hidden');
