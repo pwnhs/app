@@ -10,3 +10,17 @@ span.pw {
 #student {
 	border-bottom: 2px solid #8597A4 !important;
 }
+h1, h2, h3, h4, h5, h6 {
+	color: white;
+}
+.emph {
+    color:#cfdfea;
+    font-size:14px;
+    font-weight: bold;
+    background:#46515a;
+    border-radius: 3px;
+    padding:3px 6px;
+}
+#prenav {
+	background-color: rgba(0, 0, 0, 0.95) !important;
+}
