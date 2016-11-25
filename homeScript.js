@@ -66,7 +66,7 @@ var words = [
 	'wicked',
 	'swell',
 	'terrific'
-];
+]; 
 var word = words[Math.floor(Math.random()*words.length)];
 $('#word').text(word);
 var aan = word.charAt(0);
