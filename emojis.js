@@ -44,4 +44,4 @@ var emojiList = [
 	"turtle",
 	"unicorn",
 ];
-$('#set').text(emojiList[Math.floor(Math.random()*emojiList.length)]);
+$('#set').text('min-' + emojiList[Math.floor(Math.random()*emojiList.length)]);
