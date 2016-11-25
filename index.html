@@ -775,7 +775,7 @@
 				});
 				$('#status-trigger').on('touchend', function() {
 					if ($(this).hasClass('active')) {
-						$('#set').css('background-image', 'url("https://s3-us-west-2.amazonaws.com/emojicons/min-' + emojiList[Math.floor(Math.random()*emojiList.length)] + '.png")');
+						$('#set').css('background-image', 'url("https://s3-us-west-2.amazonaws.com/emojicons/' + emojiList[Math.floor(Math.random()*emojiList.length)] + '.png")');
 					}
 				});
 				$('.navbar-child').each(function() {
