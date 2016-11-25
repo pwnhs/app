@@ -755,11 +755,16 @@
 						alert("maaa");
 					}
 				});
+				$('#docs-trigger').on('touchend', function() {
+					if ($(this).hasClass('active')) {
+						$('#docs').animate({ scrollTop: 0 }, 'medium');
+					}
+				});
 				$('.navbar-child').each(function() {
                     $(this).on('touchend', function() {
-                        if ($(this).hasClass('active')) {
+                        /*if ($(this).hasClass('active')) {
                             $('html, body').animate({ scrollTop: 0 }, 'medium');
-                        }
+                        }*/
                         $('.navbar-child').removeClass('active');
                         $('div.body').addClass('hidden');
                         $(this).addClass('active');
