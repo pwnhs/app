@@ -776,11 +776,11 @@
 						}
 						$('#two_6, #two_7, #two_11, #two_12, #two_16, #two_17, #two_21, #two_22, #two_26, #two_27').attr('stroke', rColor2);
 						$('#read').css('color', rColor2);
-						count++;
+						count = count + 1;
 					}
 				});
-				if (count == 10) {
-					alert(a);
+				if (count > 10) {
+					alert('a');
 					window.setInterval(function(){
 						$('body').css('background', randomColor());
 					}, 10);
