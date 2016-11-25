@@ -1,4 +1,3 @@
-
 var topOff = $(window).height()/8 + 240;
 $('#home-content').css('top', topOff + 'px');
 
