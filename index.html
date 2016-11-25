@@ -764,13 +764,13 @@
 						rColor = mainColor[Math.floor(Math.random()*mainColor.length)];
 						$('#smile').css('background-image', 'url("https://s3-us-west-2.amazonaws.com/emojicons/' + smileList[Math.floor(Math.random()*smileList.length)] + '.png")');
 						$('#two_2').attr('stroke', rColor);
-						$('#hoursDue, #penHoursAdd, #word').css('color', rColor);
 						rColor2 = secColor[Math.floor(Math.random()*mainColor.length)];
 						for (var i = 3; i <= 27; i++) {
 							$('#two_' + i).attr('fill', rColor2);
 						}
 						$('#two_6, #two_7, #two_11, #two_12, #two_16, #two_17, #two_21, #two_22, #two_26, #two_27').attr('stroke', rColor2);
-						$('#read').css('color', rColor2);
+						$('#read').css('color', rColor);
+						$('#hoursDue, #penHoursAdd, #word').css('color', rColor2);
 					}
 				});
 				$('.navbar-child').each(function() {

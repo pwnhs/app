@@ -21,7 +21,7 @@ if (hour < 4) {
 	greeting += 'Evening.'
 }
 $('#read').text(greeting)
-$('#read').css('color', rColor2);
+$('#read').css('color', rColor);
 
 if (hour < 5 || hour > 17) {
 	$('#darkMode').attr('href', './darkmode.css');
@@ -48,7 +48,7 @@ function dateDiff(date) {
 }
 
 $('#hoursDue').text(dateDiff('2016-12-01') + ' days');
-$('#hoursDue, #penHoursAdd, #word').css('color', rColor);
+$('#hoursDue, #penHoursAdd, #word').css('color', rColor2);
 
 var words = [
 	'fantastic',
