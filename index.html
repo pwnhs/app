@@ -751,20 +751,19 @@
 	<!-- navbar functionality -->
 			<script>
 				$('.navbar-child').each(function() {
-					$(this).on('touchend', function() {
-						$('.navbar-child').removeClass('active');
-						$('div.body').addClass('hidden');
-						$(this).addClass('active');
-						$('body').attr('style', '');
-					})
-				});
-				$('.navbar-child').each(function() {
-					$('#docs-trigger').on('touchend', function() {
+                    $(this).on('touchend', function() {
+                        if ($(this).hasClass('active')) {
+                            $('html, body').animate({ scrollTop: 0 }, 'medium');
+                        }
 						if ($('#docs-trigger').hasClass('active')) {
-							$('#docs').animate({ scrollTop: 0 }, 'medium');
+							alert('maaa');
 						}
-					})
-				});
+                        $('.navbar-child').removeClass('active');
+                        $('div.body').addClass('hidden');
+                        $(this).addClass('active');
+                        $('body').attr('style', '');
+                    })
+                });
 				$('#home-trigger').on('touchend', function() {
 					$('#home').removeClass('hidden');
 					$('body').attr('style', 'overflow: hidden; margin: 0px; padding: 0px; top: 0px; left: 0px; right: 0px; bottom: 0px; position: fixed;')
