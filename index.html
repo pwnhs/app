@@ -763,6 +763,10 @@
 						$('#aan').text(aan);
 						$('#smile').css('background-image', 'url("https://s3-us-west-2.amazonaws.com/emojicons/' + smileList[Math.floor(Math.random()*smileList.length)] + '.png")');
 						$('#two_2').attr('stroke', mainColor[Math.floor(Math.random()*mainColor.length)]);
+						$('#hoursDue, #penHoursAdd, #word').css('color', mainColor[Math.floor(Math.random()*mainColor.length)]);
+						for (var i = 3; i <= 27; i++) {
+							$('two_' + i).attr('stroke', secColor[Math.floor(Math.random()*mainColor.length)]);
+						}
 					}
 				});
 				$('.navbar-child').each(function() {
