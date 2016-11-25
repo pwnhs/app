@@ -631,7 +631,7 @@
 					</div>
 				</div>
 			</div>
-			<code id="version" style="font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color:palevioletred;z-index:15;"><code class="git" style="color:maroon">v2.2.5</code></code>
+			<code id="version" style="font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; color:palevioletred;z-index:15;"><code class="git" style="color:maroon">v2.2.6</code></code>
 			<div id="container" style="margin-top:0;z-index:0;position:fixed;">
 				<div id="beaker">
 					<div id="liquid">
@@ -765,9 +765,11 @@
 						$('#smile').css('background-image', 'url("https://s3-us-west-2.amazonaws.com/emojicons/' + smileList[Math.floor(Math.random()*smileList.length)] + '.png")');
 						$('#two_2').attr('stroke', rColor);
 						$('#hoursDue, #penHoursAdd, #word').css('color', rColor);
+						rColor2 = secColor[Math.floor(Math.random()*mainColor.length)];
 						for (var i = 3; i <= 27; i++) {
-							$('#two_' + i).attr('stroke', secColor[Math.floor(Math.random()*mainColor.length)]);
+							$('#two_' + i).attr('fill', rColor2);
 						}
+						$('#read').css('color', rColor2);
 					}
 				});
 				$('.navbar-child').each(function() {
