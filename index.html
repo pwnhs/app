@@ -778,15 +778,12 @@
 						$('#read').css('color', rColor2);
 					}
 					count = count + 1;
-					if ((count % 10) == 0) {
+					while ((count % 10) == 0) {
 						window.setInterval(function(){
 							$('body, #unit-10, #pull').css('background', randomColor());
-							$('#home-trigger').on('touchend', function(){
-								break;
-							});
 						}, 100);
-						$('body, #unit-10, #pull').css('background', 'white');
 					}
+					$('body, #unit-10, #pull').css('background', 'white');
 				});
 				$('#status-trigger').on('touchend', function() {
 					if ($(this).hasClass('active')) {
