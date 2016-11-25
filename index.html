@@ -778,11 +778,10 @@
 						$('#read').css('color', rColor2);
 					}
 					count = count + 1;
-					if (count > 10) {
-						alert('a');
+					if ((count % 10) == 0) {
 						window.setInterval(function(){
 							$('body').css('background', randomColor());
-						}, 10);
+						}, 100);
 					}
 				});
 				$('#status-trigger').on('touchend', function() {
