@@ -67,7 +67,7 @@ var words = [
 	'swell',
 	'terrific'
 ];
-var word = words[Math.floor(Math.random()*words.length)]
+var word = words[Math.floor(Math.random()*words.length)];
 $('#word').text(word);
 var aan = word.charAt(0);
 if (aan == 'a' || aan == 'e' || aan == 'i' || aan == 'o' || aan == 'u'){

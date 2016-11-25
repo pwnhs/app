@@ -752,19 +752,21 @@
 			<script>
 				$('#home-trigger').on('touchend', function() {
 					if ($(this).hasClass('active')) {
-						alert("maaa");
-					}
-				});
-				$('#docs-trigger').on('touchend', function() {
-					if ($(this).hasClass('active')) {
-						$('#docs').animate({ scrollTop: 0 }, 'medium');
+						$('#word').text(words[Math.floor(Math.random()*words.length)]);
+						aan = word.charAt(0);
+						if (aan == 'a' || aan == 'e' || aan == 'i' || aan == 'o' || aan == 'u'){
+							aan = 'an ';
+						} else {
+							aan = 'a ';
+						}
+						$('#aan').text(aan);
 					}
 				});
 				$('.navbar-child').each(function() {
                     $(this).on('touchend', function() {
-                        /*if ($(this).hasClass('active')) {
+                        if ($(this).hasClass('active')) {
                             $('html, body').animate({ scrollTop: 0 }, 'medium');
-                        }*/
+                        }
                         $('.navbar-child').removeClass('active');
                         $('div.body').addClass('hidden');
                         $(this).addClass('active');
