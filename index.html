@@ -750,13 +750,16 @@
 
 	<!-- navbar functionality -->
 			<script>
+				$('#home-trigger').on('touchend', function() {
+					if ($(this).hasClass('active')) {
+						alert("maaa");
+					}
+				});
 				$('.navbar-child').each(function() {
                     $(this).on('touchend', function() {
                         if ($(this).hasClass('active')) {
                             $('html, body').animate({ scrollTop: 0 }, 'medium');
                         }
-							alert('maaa');
-						
                         $('.navbar-child').removeClass('active');
                         $('div.body').addClass('hidden');
                         $(this).addClass('active');
