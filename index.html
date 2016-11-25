@@ -750,6 +750,11 @@
 
 	<!-- navbar functionality -->
 			<script>
+				function randomColor () {
+					var hex = Math.floor(Math.random() * 0xFFFFFF);
+					return "#" + ("000000" + hex.toString(16)).substr(-6);
+				}
+				var count = 0;
 				$('#home-trigger').on('touchend', function() {
 					if ($(this).hasClass('active')) {
 						word = words[Math.floor(Math.random()*words.length)];
@@ -771,8 +776,15 @@
 						}
 						$('#two_6, #two_7, #two_11, #two_12, #two_16, #two_17, #two_21, #two_22, #two_26, #two_27').attr('stroke', rColor2);
 						$('#read').css('color', rColor2);
+						count ++;
 					}
 				});
+				if (count == 10) {
+					alert(a);
+					window.setInterval(function(){
+						$('body').css('background', randomColor());
+					}, 10);
+				}
 				$('#status-trigger').on('touchend', function() {
 					if ($(this).hasClass('active')) {
 						$('#set').css('background-image', 'url("https://s3-us-west-2.amazonaws.com/emojicons/' + emojiList[Math.floor(Math.random()*emojiList.length)] + '.png")');
