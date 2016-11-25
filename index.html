@@ -761,7 +761,7 @@
 							aan = 'a ';
 						}
 						$('#aan').text(aan);
-						$('#smile').text(smileList[Math.floor(Math.random()*smileList.length)]);
+						$('#smile').css('background-image', 'url("https://s3-us-west-2.amazonaws.com/emojicons/' + smileList[Math.floor(Math.random()*smileList.length)] + '.png")');
 					}
 				});
 				$('.navbar-child').each(function() {
