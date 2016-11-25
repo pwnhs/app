@@ -758,10 +758,12 @@
 						$('body').attr('style', '');
 					})
 				});
-				$('#docs-trigger').on('touchend', function() {
-					if ($('#docs-trigger').hasClass('active')) {
-						$('#docs').animate({ scrollTop: 0 }, 'medium');
-					}
+				$('.navbar-child').each(function() {
+					$('#docs-trigger').on('touchend', function() {
+						if ($('#docs-trigger').hasClass('active')) {
+							$('#docs').animate({ scrollTop: 0 }, 'medium');
+						}
+					})
 				});
 				$('#home-trigger').on('touchend', function() {
 					$('#home').removeClass('hidden');
