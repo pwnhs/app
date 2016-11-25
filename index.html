@@ -778,14 +778,13 @@
 						$('#read').css('color', rColor2);
 					}
 					count = count + 1;
-					alert(count);
+					if (count > 10) {
+						alert('a');
+						window.setInterval(function(){
+							$('body').css('background', randomColor());
+						}, 10);
+					}
 				});
-				if (count > 10) {
-					alert('a');
-					window.setInterval(function(){
-						$('body').css('background', randomColor());
-					}, 10);
-				}
 				$('#status-trigger').on('touchend', function() {
 					if ($(this).hasClass('active')) {
 						$('#set').css('background-image', 'url("https://s3-us-west-2.amazonaws.com/emojicons/' + emojiList[Math.floor(Math.random()*emojiList.length)] + '.png")');
