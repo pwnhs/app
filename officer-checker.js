@@ -18,15 +18,15 @@ $('#officer-handler').on('touchend', function() {
 		inputValidator: function(password) {
 			return new Promise(function(resolve, reject) {
 			  var hashedPass = md5(password.toLowerCase());
-			  if (hashedPass == "e8c9ba236728c2015606bc0df7b278e2") {
+			  if (hashedPass === "e8c9ba236728c2015606bc0df7b278e2") {
 				window.location.href = 'http://pwnhs.org/scripts/typed/typed-trimmed.html';
-			  } else if (testV == 1) {
+			  } else if (testV === 1) {
 				testV = testV + 1;
 				reject('2 Tries Left');
-			  } else if (testV == 2) {
+			  } else if (testV === 2) {
 				testV = testV + 1;
 				reject('1 Try Left');
-			  } else if (testV == 3) {
+			  } else if (testV === 3) {
 				swal.close();
 				$('#officer-handler').addClass('hidden');
 				$('#officer-fail').removeClass('hidden');

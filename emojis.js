@@ -42,6 +42,6 @@ var emojiList = [
 	"standing-chick",
 	"tiger",
 	"turtle",
-	"unicorn",
+	"unicorn"
 ];
 $('#set').text(emojiList[Math.floor(Math.random()*emojiList.length)]);

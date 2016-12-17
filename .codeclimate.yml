@@ -1,0 +1,33 @@
+---
+engines:
+  csslint:
+    enabled: true
+	checks:
+		important:
+			enabled: false
+		box-sizing:
+			enabled: false
+			# who uses IE 6 lol
+  duplication:
+    enabled: false
+    config:
+      languages:
+      - ruby
+      - javascript
+      - python
+      - php
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "**.css"
+  - "**.inc"
+  - "**.js"
+  - "**.jsx"
+  - "**.module"
+  - "**.php"
+  - "**.py"
+  - "**.rb"
+exclude_paths: []

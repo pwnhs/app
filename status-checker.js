@@ -23,8 +23,8 @@ var jun2 = juniors.map(md5);
 
 var updateInputs = function () {
 	studID = input.value;
-	intID = parseInt(studID);
-	if (studID.length == 6){
+	intID = parseInt(studID, 10);
+	if (studID.length === 6){
 		meetings.classList.remove("hidden");
 		// remove penalty hours slot for first semester juniors
 		if (!(juniors.indexOf(md5(studID)) > -1)) {

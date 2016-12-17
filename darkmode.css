@@ -1,4 +1,5 @@
 body {
+	background: rgb(0, 0, 0);
 	background: rgba(0, 0, 0, 0.99) !important;
 }
 span.pw {
@@ -22,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
     padding:3px 6px;
 }
 #prenav {
+	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.95) !important;
 }
 a:hover{
@@ -32,16 +34,20 @@ a:hover{
     color: #FFF;
 }
 .bgc-white{
+	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.95);
 }
 .twtr .icon-lg, .fbook .icon-lg, .rmnd .icon-lg, .gith .icon-lg, .mail1 .icon-lg, .mail2 .icon-lg, .mail3 .icon-lg, .mail4 .icon-lg{
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
+	color: rgb(255, 255, 255);
 	color: rgba(255, 255, 255, 0.6);
 }
 label {
+	color: rgb(255, 255, 255);
 	color: rgba(255, 255, 255, 0.6);
 }
 #pull {
+	background: rgb(0, 0, 0); 
 	background: rgba(0, 0, 0, 0.95) !important; 
 }

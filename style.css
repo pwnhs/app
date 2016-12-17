@@ -1,6 +1,5 @@
 /* = Global type styling
 -------------------------------------------------------------- */
-@font-face { font-family: 'Glyphicons Halflings'; src: url(http://docs.pwnhs.org/fonts/glyphicons-halflings-regular.eot?#iefix) format(embedded-opentype), url(http://docs.pwnhs.org/fonts/glyphicons-halflings-regular.woff2) format(woff2), url(http://docs.pwnhs.org/fonts/glyphicons-halflings-regular.woff) format(woff), url(http://docs.pwnhs.org/fonts/glyphicons-halflings-regular.ttf) format(truetype), url(http://docs.pwnhs.org/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format(svg); }
 
 @media (min-width: 768px) and (max-width: 991px) {
 	.container {
@@ -28,6 +27,8 @@
 }
 
 .btn {
+	-ms-user-select: none;
+	-moz-user-select: none;
 	-webkit-user-select: none;
 	background-image: none;
 	border-color: transparent;
@@ -40,7 +41,7 @@
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 1.5;
-	margin-bottom: 0px;
+	margin-bottom: 0;
 	padding-bottom: 1px;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -56,10 +57,7 @@
 	color: rgb(199, 37, 78);
 	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 	font-size: 90%;
-	padding-bottom: 2px;
-	padding-left: 4px;
-	padding-right: 4px;
-	padding-top: 2px;
+	padding: 2px 4px;
 }
 
 .col-xs-9 {
@@ -80,10 +78,10 @@
 
 .navtrack {
 	background-color: transparent;
-	border-radius: 0px;
+	border-radius: 0;
 	color: inherit;
 	font-size: inherit;
-	padding: 0px;
+	padding: 0;
 	white-space: pre-wrap;
 }
 
@@ -107,7 +105,7 @@ body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.42857143;
-	margin: 0px;
+	margin: 0;
 }
 
 h1 {
@@ -116,10 +114,7 @@ h1 {
 	font-size: 36px;
 	font-weight: 500;
 	line-height: 1.1;
-	margin-bottom: 10px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 20px;
+	margin: 20px 0 10px 0;
 }
 
 h2 {
@@ -150,13 +145,10 @@ html {
 
 p {
 	font-family: proxima-nova, sans-serif;
-	margin-bottom: 10px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 0px;
+	margin: 0 0 10px 0;
 }
 
-pre.veeee {
+.veeee {
 	background-color: rgb(245, 245, 245);
 	border-color: rgb(204, 204, 204);
 	border-radius: 4px;
@@ -167,10 +159,7 @@ pre.veeee {
 	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 	font-size: 13px;
 	line-height: 1.42857143;
-	margin-bottom: 10px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 0px;
+	margin: 0 0 10px 0;
 	overflow: auto;
 	padding: 9.5px;
 	word-break: break-all;
@@ -183,7 +172,7 @@ span a {
 
 ul {
 	margin-bottom: 10px;
-	margin-top: 0px;
+	margin-top: 0;
 }
 
 /*
@@ -204,8 +193,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 body, .body {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	color: #8597A4;
 }
 body {
@@ -283,7 +272,7 @@ p a{
     margin-bottom: 100px;
 }
 .docs-section-cut{
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 .contain-do-dont{
     position: relative;
@@ -323,8 +312,8 @@ p a{
     transition: all .2s ease-out;
 }
 .nav{
-    padding: 0px 0px 0px 0px !important;
-    margin: 0px 0px 0px 0px !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 ::-webkit-scrollbar {
     display: none;
