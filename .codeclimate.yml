@@ -3,11 +3,11 @@ engines:
   csslint:
     enabled: true
 	checks:
-		important:
-			enabled: false
-		box-sizing:
-			enabled: false
-			# who uses IE 6 lol
+      important:
+        enabled: false
+      box-sizing:
+        enabled: false
+		#who the hell still uses IE 6
   duplication:
     enabled: false
     config:
